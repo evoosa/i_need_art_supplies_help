@@ -3,8 +3,11 @@
 
 class artSupply():
     """ a Class For an Art Supply """
+
     def __init__(self, logger, **details):
         self.details = details
+        self.id = self.details['details']['id']
+        self.logger = logger
         self.group_membership = {}
         self.attributes = {}
         self.__parse_details()
@@ -15,3 +18,4 @@ class artSupply():
                 self.group_membership[key.replace('g_', '')] = self.details['details'][key]
             elif key.startswith('attr_'):
                 self.attributes[key.replace('attr_', '')] = self.details['details'][key]
+        # self.logger.debug(self.__dict__)
