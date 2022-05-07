@@ -2,7 +2,7 @@
 class artSupply():
     """ a Class For an Art Supply """
 
-    def __init__(self, logger, details):
+    def __init__(self, logger, details: dict):
         self.__details = details
         self.id = self.__details['id']
         self.logger = logger
