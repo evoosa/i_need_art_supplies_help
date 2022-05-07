@@ -35,11 +35,12 @@ def get_logger():
 
 def get_art_supplies(logger):
     """ get art supplies from CSV """
-    art_supplies = []
+    art_supplies = {}
     with open(ART_SUPPLIES_CSV, 'r') as art_supplies_csv:
         reader = csv.DictReader(art_supplies_csv)
         for row in reader:
-            art_supplies.append(artSupply(logger=logger, details=row))
+            art_supply = artSupply(logger=logger, details=row)
+            art_supplies[art_supply.id] = art_supply
             logger.debug(f'imported {row["id"]}')
         logger.info(f'imported {len(art_supplies)} art supplies')
     return art_supplies
@@ -55,17 +56,17 @@ def get_groups(logger, art_supplies):
         logger.info(f'got groups: {list(groups.keys())}')
 
     logger.debug(f'filling groups..')
-    for art_supply in art_supplies:
+    for art_supply in art_supplies.values():
         for group in art_supply.group_membership.items():
             if group[1] == '0':
-                groups[group[0]].append(art_supply)
+                groups[group[0]].append(art_supply.id)
     return groups
 
 
 if __name__ == '__main__':
     logger = get_logger()
     art_supplies = get_art_supplies(logger)
-    groups = get_groups(logger, art_supplies=art_supplies)
+    groups = get_groups(logger, art_supplies)
     import ipdb
 
     ipdb.set_trace()
