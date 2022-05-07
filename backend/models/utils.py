@@ -51,7 +51,7 @@ def get_groups(logger, art_supplies):
     with open(ART_SUPPLIES_CSV, 'r') as art_supplies_csv:
         reader = csv.DictReader(art_supplies_csv)
         fieldnames = reader.fieldnames
-        groups = {group_name.replace('g_', '') : [] for group_name in fieldnames if group_name.startswith('g_')}
+        groups = {group_name.replace('g_', ''): [] for group_name in fieldnames if group_name.startswith('g_')}
         logger.info(f'got groups: {list(groups.keys())}')
 
     logger.debug(f'filling groups..')
@@ -62,11 +62,10 @@ def get_groups(logger, art_supplies):
     return groups
 
 
-
-
 if __name__ == '__main__':
     logger = get_logger()
     art_supplies = get_art_supplies(logger)
     groups = get_groups(logger, art_supplies=art_supplies)
     import ipdb
+
     ipdb.set_trace()
