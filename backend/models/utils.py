@@ -1,13 +1,13 @@
 import csv
 import os.path
 
-from art_supply import artSupply
+from .art_supply import artSupply
 import logging
 from datetime import datetime
 import os
 
 APP_NAME = 'art_supplies_app'
-ART_SUPPLIES_CSV = '../art_supplies/art_supplies.csv'
+ART_SUPPLIES_CSV = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../art_supplies/art_supplies.csv')
 BASE_DIR = f'/opt/{APP_NAME}'
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
 
@@ -60,13 +60,14 @@ def get_groups(logger, art_supplies):
         for group in art_supply.group_membership.items():
             if group[1] == '0':
                 groups[group[0]].append(art_supply.id)
+    logger.debug(f'done filling groups')
     return groups
 
 
 if __name__ == '__main__':
     logger = get_logger()
-    art_supplies = get_art_supplies(logger)
-    groups = get_groups(logger, art_supplies)
+    # art_supplies = get_art_supplies(logger)
+    # groups = get_groups(logger, art_supplies)
     import ipdb
 
     ipdb.set_trace()

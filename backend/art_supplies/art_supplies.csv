@@ -1,4 +1,4 @@
-material,id,g_compact,g_crafting,g_sketching,g_painting,g_writing,g_messy,g_together,g_safe_bet,attr_min_price_ils,attr_available_in_set,attr_available_in_singles,attr_price_per,notes
+material,id,attr_compact,g_crafting,g_sketching,g_painting,g_writing,attr_messy,attr_together,attr_safe_bet,attr_min_price_ils,attr_available_in_set,attr_available_in_singles,attr_price_per,notes
 Paint Brushes,paint_brushes,0,1,1,0,1,0,1,1,10,0,0,brush,"you can get cheap ones for 10 ILS a set, or a fancy one for 25 ILS or more - anyway, they'll do the job"
 Canvas,canvas,1,1,1,0,1,0,1,1,4,0,0,canvas,
 Sketchbook,sketchbook,0,1,0,1,0,1,1,1,50,0,0,sketchbook,
@@ -19,7 +19,7 @@ Embroidery Kit,embroidery_kit,1,0,1,1,1,1,1,1,20,0,1,kit,
 POSCA Markers,posca_markers,0,1,0,1,0,1,1,1,80,0,0,set,opaque permanent markers great for sketching and street-art
 Graphite Pencils,graphite_pencils,0,1,0,1,1,1,1,1,50,0,0,set,
 Colorful Pencils,colorful_pencils,0,1,0,1,1,1,1,1,50,0,0,set,
-Calligraphy Pens,calligraphy_pens,0,1,0,1,0,1,1,1,50,0,0,pen,explain what's calligraphy
+Calligraphy Pens,calligraphy_pens,0,1,1,1,0,1,1,1,50,0,0,pen,explain what's calligraphy
 Pilot Pens,pilot_pens,0,1,0,1,0,1,1,1,60,0,0,set,great pens for everyday writing as well as sketching. comes in colorful sets as well as single pens
 Rapidograph Pens,rapidograph_pens,0,1,0,1,0,1,1,1,70,0,0,set,"great for sketching, sets contain pens in different widths - from thick to thin"
 Manikin Doll,manikin_doll,1,1,0,0,1,1,1,1,15,1,0,doll,
