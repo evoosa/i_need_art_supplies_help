@@ -43,3 +43,18 @@ class recommendation():
                     for supply in self.groups[group]:
                         self.logger.info(f'removing {supply} since the spouse doesn\'t like {group}')
                         _remove_supply(self, supply)
+
+        # if it's an activity to do together, remove all non-together activities. if it's for the spouse only - remove all together activities
+        if self.answer['together'] == '0':
+            for supply in self.recommended_art_supplies.keys():
+                if supply not in self.groups['together']:
+                    self.logger.info(f'removing {supply} since it\'s not meant to be used together')
+                    _remove_supply(self, supply)
+        elif self.answer['together'] == '1':
+            for supply in self.recommended_art_supplies.keys():
+                if supply in self.groups['together']:
+                    self.logger.info(f'removing {supply} since it\'s for loners only')
+                    _remove_supply(self, supply)
+        elif self.answer['together'] == '2':
+            self.logger.info(f'not removing supplies since the activity can be done together or alone, skipping')
+
