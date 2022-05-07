@@ -20,10 +20,11 @@ class recommendation():
 
     def _handle_compact_art_supplies(self):
         """ if the supplies need to be compact, drop everything that is not compact. else, pass """
+        self.logger.info('*** handling compact supplies ***')
         recommended_art_supplies_keys = list(self.recommended_art_supplies.keys()).copy()
         if self.answer['compact'] == '0':
             for supply in recommended_art_supplies_keys:
-                if supply not in self.groups['compact']:
+                if self.og_art_supplies[supply].attributes['compact'] == '1':
                     self.logger.info(f'removing {supply} since it\'s not compact')
                     self.__remove_supply(supply)
                 else:
@@ -31,6 +32,7 @@ class recommendation():
 
     def _handle_experimental_art_supplies(self):
         """ if she doesn't like experimenting, remove all supplies that she won't like. if she does, do nothing """
+        self.logger.info('*** handling experimental supplies ***')
         supplies_to_potentially_remove = []
         supplies_to_keep = []
         if self.answer['likes_experimenting'] == '1':
@@ -51,6 +53,7 @@ class recommendation():
 
     def _handle_together_art_supplies(self):
         """ if it's an activity to do together, remove all non-together activities. if it's for the spouse only - remove all together activities """
+        self.logger.info('*** handling together-ish supplies ***')
         recommended_art_supplies_keys = list(self.recommended_art_supplies.keys()).copy()
         if self.answer['together'] == '0':
             for supply in recommended_art_supplies_keys:
@@ -69,7 +72,7 @@ class recommendation():
         recommended_art_supplies_keys = list(self.recommended_art_supplies.keys()).copy()
         if self.answer['safe_bet'] == '0':
             for supply in recommended_art_supplies_keys:
-                if supply not in self.groups['safe_bet']:
+                if self.og_art_supplies[supply].attributes['safe_bet'] == '1':
                     self.logger.info(f'removing {supply} since it\'s not a safe bet')
                     self.__remove_supply(supply)
                 else:

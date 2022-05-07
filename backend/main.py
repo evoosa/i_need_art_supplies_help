@@ -4,11 +4,11 @@ from models.recommendation import recommendation
 # '0' = true, 1 = false, 2 = both
 test_answer = {
     'compact': '0',  # indoors / outdoors / NM
-    'preferred_art_types': ['crafting', 'sketching', 'painting', 'writing'],
-    'likes_experimenting': '0',
+    'preferred_art_types': ['crafting', 'sketching', 'painting'],
+    'likes_experimenting': '1',
     'messy': '0',
     'together': '0',
-    'safe_bet': '0'
+    'safe_bet': '1'
 }
 
 if __name__ == '__main__':
