@@ -1,0 +1,34 @@
+art_supply_name,id,g_compact,g_crafting,g_sketching,g_painting,g_writing,g_messy,g_smelly,g_together,g_safe_bet,attr_min_price_ils,attr_available_in_set,attr_available_in_singles,attr_price_per,notes
+Canvas,canvas,1,1,1,0,1,0,1,1,1,4,1,0,canvas,
+Sketchbook,sketchbook,0,1,0,1,0,1,1,1,1,50,1,0,sketchbook,
+Tombow Markers,tombow_markers,0,1,0,1,1,1,1,1,1,70,0,0,set,high quality water-based markers
+Copic Markers,copic_markers,0,1,1,0,1,1,1,1,1,130,0,0,set,high quality alcohol-based markers
+Sharpie Markers,sharpie_markers,1,1,0,0,1,1,0,1,1,50,0,0,set,alcohol-based markers
+Watercolors,watercolors,0,1,0,0,1,1,1,1,1,150,0,0,set,dries quick and good outdoor painting
+Charcoals,charcoals,1,1,1,0,1,0,1,1,1,25,0,0,set,interesting material to exprience with for people who like pencil drawing
+Acrylic Paint,acrylic_paint,1,1,1,0,1,0,1,1,1,25,0,0,set,dries quick
+Painting Pedestal,painting_pedestal,1,1,1,0,1,0,1,1,1,60,1,0,pedestral,
+Color Platter,color_platter,1,1,1,0,1,0,1,1,1,5,1,0,platter,
+3D Painting Pen,3d_painting_pen,1,0,1,1,1,1,1,0,1,500,1,0,pen and fillament,draws in 3D using a plastic fillament
+Eraser,eraser,0,1,0,1,1,1,1,1,1,4,1,0,eraser,
+Sharpener,sharpener,0,1,0,1,1,1,1,1,1,5,1,0,sharpener,
+Brush Case,brush_case,0,1,1,0,1,0,1,1,1,70,1,0,case,
+Pencil Case,pencil_case,0,1,0,1,0,1,1,1,1,70,1,0,case,
+Embroidery Kit,embroidery_kit,1,0,1,1,1,1,1,1,1,20,0,1,kit,
+POSCA Markers,posca_markers,0,1,0,1,0,1,1,1,1,80,0,0,set,opaque permanent markers great for sketching and street-art
+Graphite Pencils,graphite_pencils,0,1,0,1,1,1,1,1,1,50,0,0,set,
+Colorful Pencils,colorful_pencils,0,1,0,1,1,1,1,1,1,50,0,0,set,
+Calligraphy Pens,calligraphy_pens,0,1,0,1,0,1,1,1,1,50,0,0,pen,explain what's calligraphy
+Pilot Pens,pilot_pens,0,1,0,1,0,1,1,1,1,60,0,0,set,great pens for everyday writing as well as sketching. comes in colorful sets as well as single pens
+Rapidograph Pens,rapidograph_pens,0,1,0,1,0,1,1,1,1,70,0,0,set,"great for sketching, sets contain pens in different widths - from thick to thin"
+Manikin Doll,manikin_doll,1,1,0,0,1,1,1,1,1,15,1,0,doll,
+Random Art Supplies From Maxstock,random_maxstock_art_supplies,1,0,1,1,1,0,0,0,1,5,2,2,package,"ponpons, popsicle sticks, wooden cubes, google eyes, and more. need to get glue as well"
+Plastic Models,plastic_models,1,0,1,1,1,0,0,1,1,60,1,0,kit,פאזלנד
+Origami Paper,origami_paper,0,0,1,1,1,1,1,0,1,25,0,1,set,
+Fimo Clay,fimo_clay,1,0,1,1,1,0,1,1,1,13,1,0,color,the price is per color. polymer clay. you sculpt it and put it in the oven
+DAS Clay,das_clay,1,0,1,1,1,0,1,0,1,25,1,0,clay block,air-dry clay. you sculpt and let it dry for a day. great for sculpting together
+Premade Art Kit,premade_art_kit,1,0,1,1,1,1,1,0,0,30,2,2,kit,"go straight in to the store, and ask where are the premade art kits. choose one that you like"
+Vouchour,vouchour,1,1,1,1,1,1,1,1,0,0,2,2,vouchour,"buy it online for one of the art supply stores, so youre spouse will be able to choose whatever s.he likes"
+Duo Workshop,duo_workshop,1,0,1,1,1,0,1,0,1,150,2,2,person,search for workshops in funzing or eventbrite. a one-time ceramics workshop for example
+Paint & Pint,paint_and_pint,1,1,1,0,1,0,1,0,0,90,2,2,person,"abraham hostel organizes paint & pint. ""paint pub"" and ""paint night"". OR - DM me and i'll organize you a cheaper solution :)"
+Seed Beads,Seed Beads,1,0,1,1,1,1,1,1,1,10,2,2,color (package of beads),"small beads, great for creating necklaces and bracelets for beginners. get your spouse several colors and a plastic cord (חוט דייגים), it will definitely keep them occupied. buy them in the nearest art store or beads store"
