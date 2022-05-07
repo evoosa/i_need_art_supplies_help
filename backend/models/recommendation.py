@@ -41,10 +41,8 @@ class recommendation():
                 else:
                     supplies_to_keep += self.groups[group]
                     self.logger.debug(f'keeping {group} since the spouse likes it')
-            print(f'remove: {set(supplies_to_potentially_remove)}')
-            print(f'keep: {set(supplies_to_keep)}')
+
             supplies_to_remove = list(set(supplies_to_potentially_remove) - set(supplies_to_keep))
-            print(supplies_to_remove)
             for supply in supplies_to_remove:
                 self.logger.info(f'removing {supply} since the spouse doesn\'t like it\'s group')
                 self.__remove_supply(supply)
