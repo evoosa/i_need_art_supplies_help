@@ -1,4 +1,4 @@
-art_supply_name,id,g_compact,g_crafting,g_sketching,g_painting,g_writing,g_messy,g_smelly,g_together,g_safe_bet,attr_min_price_ils,attr_available_in_set,attr_available_in_singles,attr_price_per,notes
+art_supply_name,id,g_compact,g_crafting,g_sketching,g_painting,g_writing,g_messy,g_smelly,g_together,g_safe_bet,attr_min_price_ils,attr_available_in_set,attr_available_in_singles,attr_price_per,attr_notes
 Canvas,canvas,1,1,1,0,1,0,1,1,1,4,1,0,canvas,
 Sketchbook,sketchbook,0,1,0,1,0,1,1,1,1,50,1,0,sketchbook,
 Tombow Markers,tombow_markers,0,1,0,1,1,1,1,1,1,70,0,0,set,high quality water-based markers
