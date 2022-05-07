@@ -54,13 +54,13 @@ class recommendation():
         recommended_art_supplies_keys = list(self.recommended_art_supplies.keys()).copy()
         if self.answer['together'] == '0':
             for supply in recommended_art_supplies_keys:
-                if supply not in self.groups['together']:
-                    self.logger.info(f'removing {supply} since it\'s not meant to be used together')
+                if self.og_art_supplies[supply].attributes['together'] == '1':
+                    self.logger.info(f'removing {supply} since the spouse is looking for a couple\'s activity')
                     self.__remove_supply(supply)
         elif self.answer['together'] == '1':
             for supply in recommended_art_supplies_keys:
-                if supply in self.groups['together']:
-                    self.logger.info(f'removing {supply} since it\'s for loners only')
+                if self.og_art_supplies[supply].attributes['together'] == '0':
+                    self.logger.info(f'removing {supply} since the spouse is a loner')
                     self.__remove_supply(supply)
         elif self.answer['together'] == '2':
             self.logger.info(f'not removing supplies since the activity can be done together or alone, skipping')
