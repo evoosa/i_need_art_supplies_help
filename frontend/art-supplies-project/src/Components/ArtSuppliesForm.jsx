@@ -14,7 +14,7 @@ export class ArtSuppliesForm extends Component {
             "writing": 1
         },
         compact: '1',
-        painting: '3',
+        painting: '1',
         likesExperimenting: '1',
         messy: '1',
         together: '1',
@@ -48,7 +48,7 @@ export class ArtSuppliesForm extends Component {
         console.log(e)
     };
 
-    handleChange_2 = (key, val) => (e) => {
+    handleArtTypeToggleChange = (key, val) => {
         this.state.preferredArtTypes[key] = val
         console.log(this.state.preferredArtTypes)
     };
@@ -62,8 +62,7 @@ export class ArtSuppliesForm extends Component {
             case 1:
                 return (
                     <PreferredArtTypes
-                        handleChange={this.handleChange_2}
-                        values={values}
+                        handleToggleChange={this.handleArtTypeToggleChange}
                         continues={this.continues}
                         state={this.state}
                     />

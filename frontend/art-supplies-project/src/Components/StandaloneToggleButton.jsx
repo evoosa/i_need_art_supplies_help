@@ -5,7 +5,7 @@ export default function StandaloneToggleButton(props) {
     const [selected, setSelected] = React.useState(true);
     const [val, setVal] = useState("1");
 
-    const toggleDisplay = () => {
+    const toggleVal = () => {
         if (val === "0") {
             setVal("1");
         } else {
@@ -17,10 +17,10 @@ export default function StandaloneToggleButton(props) {
         <ToggleButton
             value={val}
             selected={selected}
-            onClick={toggleDisplay}
-            onChange={props.handleChange(props.activity, val)}
+            onClick={toggleVal}
+            onChange={props.handleToggleChange(props.activity, val)}
         >
-            {props.activity} {val}
+            {props.activity} {val} // FIXME
         </ToggleButton>
     );
 }

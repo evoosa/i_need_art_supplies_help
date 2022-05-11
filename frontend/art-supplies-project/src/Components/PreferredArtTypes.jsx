@@ -20,7 +20,7 @@ import StandaloneToggleButton from "./StandaloneToggleButton"
 
 export class PreferredArtTypes extends Component {
     render() {
-        const {handleChange, values, continues, state} = this.props
+        const {handleToggleChange, continues, state} = this.props
         return (
             <MuiThemeProvider>
 
@@ -31,14 +31,14 @@ export class PreferredArtTypes extends Component {
 
                     <StandaloneToggleButton
                         activity="painting"
-                        handleChange={handleChange}
+                        handleToggleChange={handleToggleChange}
                         state={state}
                     >
                     </StandaloneToggleButton>
 
                     {/*<ToggleButtonGroup*/}
                     {/*    value={values.painting}*/}
-                    {/*    onChange={handleChange('painting') }*/}
+                    {/*    onChange={handleToggleChange('painting') }*/}
                     {/*    name="date"*/}
                     {/*    id="date-select"*/}
                     {/*    exclusive={true}*/}
@@ -99,7 +99,7 @@ export class PreferredArtTypes extends Component {
                     {/*</ToggleButtonGroup>*/}
                     {/*<ToggleButtonGroup*/}
                     {/*    value="Enter Your First Name"*/}
-                    {/*    onChange={handleChange("firstName")}*/}
+                    {/*    onChange={handleToggleChange("firstName")}*/}
                     {/*    // aria-label="text formatting"*/}
                     {/*>*/}
                     {/*    <ToggleButton value="bold" aria-label="bold">*/}
@@ -116,11 +116,6 @@ export class PreferredArtTypes extends Component {
                     {/*        <ArrowDropDownIcon/>*/}
                     {/*    </ToggleButton>*/}
                     {/*</ToggleButtonGroup>*/}
-                    <br/>
-                    <TextField // TODO - DELETE
-                        onChange={handleChange("email")}
-                        defaultValue={values.email}
-                    />
                     <br/>
                     <ArrowForwardIcon
                         onClick={continues}
