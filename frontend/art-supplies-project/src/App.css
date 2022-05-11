@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");
+
+body {
+    background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");
+    font-family: "Bree Serif", serif;
+}
+
+.userform {
+    width: 90%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    float: center;
+    padding: 20px;
+    background: linear-gradient(10deg, #fdfdfd 100%, #9dfccb 00%);
+    color: #fff;
+    border: 2px solid rgb(164, 72, 255);
+    border-radius: 10px;
+    box-shadow: 8px 8px rgb(241, 131, 131);
+}
+
+.nextMenu {
+    margin: 20px;
+    cursor: pointer;
+    color: rgb(0, 188, 212);
+}
+
+.nextMenu:hover {
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 188, 212);
+}
+
+.success {
+    color: green;
+    margin: 30px;
+}
+
+.toggleButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-outside: 100px;
+    color: antiquewhite;
+}
