@@ -23,10 +23,9 @@ export class PreferredArtTypes extends Component {
         const {handleToggleChange, continues, state} = this.props
         return (
             <MuiThemeProvider>
-
                 <React.Fragment>
-
-                    <AppBar title="firstly - are you scared from your spouse and prefer a safe bet?" iconClassNameLeft/>
+                    <h1 className={"header"}>what art types do you think that your spouse would like?</h1>
+                    <h2 className={"subHeader"}>so I'll know which categories of art supplies I should recommend.</h2>
                     <br/>
                     <Grid container columns={2}
                           alignItems="center"
