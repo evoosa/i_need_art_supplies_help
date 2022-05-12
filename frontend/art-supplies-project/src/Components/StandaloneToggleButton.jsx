@@ -1,6 +1,4 @@
 import React, {useState} from "react";
-import ToggleButton from "@mui/material/ToggleButton";
-
 
 export default function StandaloneToggleButton(props) {
     const [selected, setSelected] = React.useState(false);
@@ -20,7 +18,7 @@ export default function StandaloneToggleButton(props) {
         <button
             className={"artTypesToggleButton"}
             value={val}
-            style={{"background-image": "url(' " +props.imageUrl + " ')"}}
+            style={{"background-image": "url(' " + props.imageUrl + " ')"}}
             onClick={toggleVal}
             onChange={props.handleToggleChange(props.activity, val)}
 

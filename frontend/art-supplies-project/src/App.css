@@ -2,7 +2,8 @@
 
 body {
     background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");
-    font-family: monaco, Consolas, "Lucida Console", monospace;
+    /*font-family: monaco, Consolas, "Lucida Console", monospace;*/
+    font-family: system-ui;
 }
 
 .userform {
@@ -44,7 +45,7 @@ body {
     text-align: center;
     margin: auto;
     border: 3px solid #4b9aa8;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     max-height: 90%;
     max-width: 90%;
     border-radius: 10px;
@@ -72,7 +73,7 @@ body {
     border-radius: 10px;
 
     /* TEXT */
-    color: white;
+    color: #c56a9d;
     font-size: 15px;
     max-font-size: 15px;
     text-transform: lowercase;
@@ -82,6 +83,13 @@ body {
 .success {
     color: green;
     margin: 30px;
+}
+
+.choiceRadioGroup {
+    /* ELEMENT */
+    margin: auto;
+    padding: 10px;
+    width: 80%;
 }
 
 .artTypesToggleButton {
@@ -113,10 +121,3 @@ body {
 .artTypesToggleButton:active {
     border: 4px solid #5cbbcc;
 }
-
-/*.artTypesToggleButton:checked {*/
-/*    color: aqua;*/
-/*    margin-outside: 100px;*/
-/*    margin-inside: 100px;*/
-/*    shape-margin: 100px;*/
-/*}*/

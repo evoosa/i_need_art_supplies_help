@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import PreferredArtTypes from "./PreferredArtTypes";
-import FormPersonalDetails from "./FormPersonalDetails";
+import SafeBetChoice from "./SafeBetChoice"
 import Confirm from "./Confirm";
 import Success from "./Success";
 
@@ -42,9 +42,8 @@ export class ArtSuppliesForm extends Component {
     };
 
     // Handle fields change
-    handleChange = (input) => (e) => {
-        this.setState({[input]: e.target.value});
-        // console.log(input + " " + e.target.value)
+    handleChoice = (e) => {
+        this.state[e.target.name] = e.target.value
         console.log(this.state)
     };
 
@@ -53,11 +52,10 @@ export class ArtSuppliesForm extends Component {
         console.log(this.state.preferredArtTypes)
     };
 
-    render() { // TODO - remove email
+    render() {
         const {step} = this.state;
         const {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet, email} = this.state;
         const values = {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet, email};
-
         switch (step) {
             case 1:
                 return (
@@ -69,10 +67,8 @@ export class ArtSuppliesForm extends Component {
                 );
             case 2:
                 return (
-                    <FormPersonalDetails
-                        handleChange={this.handleChange}
-                        values={values}
-                        back={this.back}
+                    <SafeBetChoice
+                        handleChoice={this.handleChoice}
                         continues={this.continues}
                     />
                 );
@@ -80,7 +76,6 @@ export class ArtSuppliesForm extends Component {
                 return (
                     <Confirm
                         values={values}
-                        back={this.back}
                         continues={this.continues}
                     />
                 );

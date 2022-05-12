@@ -1,21 +1,7 @@
 import React, {Component} from "react";
-import {TextField, AppBar} from "material-ui";
 import {MuiThemeProvider} from "material-ui/styles";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import FormatBoldIcon from '@mui/icons-material/FormatBold';
-import FormatItalicIcon from '@mui/icons-material/FormatItalic';
-import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
-import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ToggleButton from '@mui/material/ToggleButton';
-import ButtonGroup from '@mui/material/ButtonGroup'
-import Button from '@mui/material/Button'
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
 import Grid from '@mui/material/Grid';
-import DeleteIcon from "@material-ui/icons/Delete";
-import Avatar from "@material-ui/core/Avatar";
-import {useState} from "react";
 import StandaloneToggleButton from "./StandaloneToggleButton"
 
 export class PreferredArtTypes extends Component {
@@ -52,7 +38,6 @@ export class PreferredArtTypes extends Component {
 
                     </Grid>
                     <br/>
-
                     <Grid container columns={2}
                           alignItems="center"
                           justifyContent="center"
