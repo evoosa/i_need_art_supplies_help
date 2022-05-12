@@ -1,37 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");*/
 
 body {
     background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");
-    font-family: "Bree Serif", serif;
+    /*font-family: "Bree Serif", serif;*/
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    /*font-family: Arial, Helvetica, sans-serif;*/
 }
 
 .userform {
-    width: 90%;
-    max-width: 400px;
+    width: 50%;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 3%;
+    margin-bottom: 5%;
     text-align: center;
     float: center;
-    padding: 20px;
-    background: linear-gradient(10deg, #fdfdfd 100%, #9dfccb 00%);
+    padding: 3%;
+    background: linear-gradient(#d1f8ff, #f6aee2);
     color: #fff;
-    border: 2px solid rgb(164, 72, 255);
+    border: 3px solid #c769b5;
     border-radius: 10px;
-    box-shadow: 8px 8px rgb(241, 131, 131);
+    box-shadow: 8px 8px #de79b1;
 }
 
 .nextMenu {
     margin: 20px;
     cursor: pointer;
-    color: rgb(0, 188, 212);
+    color: #5cbbcc;
 }
 
 .nextMenu:hover {
     margin: 20px;
+    border-radius: 90%;
     cursor: pointer;
     color: white;
-    background-color: rgb(0, 188, 212);
+    background-color: rgba(92, 187, 204);
+
+
 }
 
 .success {
@@ -39,9 +45,36 @@ body {
     margin: 30px;
 }
 
-.toggleButton {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-outside: 100px;
-    color: antiquewhite;
+.artTypesToggleButton {
+    /* ELEMENT */
+    background-size: cover;
+    border: 2px solid #b4b4b4;
+    height: 200px;
+    width: 200px;
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 10px;
+
+    /* TEXT */
+    color: #d1f8ff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: -2px -2px 0 #de79b1, 2px -2px 0 #c7026f, -2px 2px 0 #b90268, 2px 2px 0 #980456;
 }
+
+
+.artTypesToggleButton:after {
+    /*content: "";*/
+    /*display: block;*/
+    /*padding-bottom: 100%;*/
+
+
+}
+
+/*.artTypesToggleButton:checked {*/
+/*    color: aqua;*/
+/*    margin-outside: 100px;*/
+/*    margin-inside: 100px;*/
+/*    shape-margin: 100px;*/
+/*}*/

@@ -28,94 +28,57 @@ export class PreferredArtTypes extends Component {
 
                     <AppBar title="firstly - are you scared from your spouse and prefer a safe bet?" iconClassNameLeft/>
                     <br/>
-
-                    <StandaloneToggleButton
-                        activity="painting"
-                        handleToggleChange={handleToggleChange}
-                        state={state}
+                    <Grid container columns={2}
+                          alignItems="center"
+                          justifyContent="center"
+                          direction="row"
                     >
-                    </StandaloneToggleButton>
+                        <Grid item xs={1}>
+                            <StandaloneToggleButton
+                                activity="painting"
+                                handleToggleChange={handleToggleChange}
+                                state={state}
+                                imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/painting.jpg">
+                            </StandaloneToggleButton>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <StandaloneToggleButton
+                                activity="sketching"
+                                handleToggleChange={handleToggleChange}
+                                state={state}
+                                imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/sketching.jpg"
+                            >
+                            </StandaloneToggleButton>
+                        </Grid>
 
-                    {/*<ToggleButtonGroup*/}
-                    {/*    value={values.painting}*/}
-                    {/*    onChange={handleToggleChange('painting') }*/}
-                    {/*    name="date"*/}
-                    {/*    id="date-select"*/}
-                    {/*    exclusive={true}*/}
-                    {/*    size="small">*/}
-                    {/*    <ToggleButton value="today">Today</ToggleButton>*/}
-                    {/*    <ToggleButton value="tomorrow">Tomorrow</ToggleButton>*/}
-                    {/*    <ToggleButton value="week">This week</ToggleButton>*/}
-                    {/*</ToggleButtonGroup>*/}
+                    </Grid>
+                    <br/>
 
-                    {/*<ToggleButton on onChange={values['']} value="1">Web</ToggleButton>*/}
-                    {/*<ToggleButton value="android">Android</ToggleButton>*/}
-                    {/*<ToggleButton value="ios">iOS</ToggleButton>*/}
+                    <Grid container columns={2}
+                          alignItems="center"
+                          justifyContent="center"
+                          direction="row"
+                    >
+                        <Grid item xs={1}>
+                            <StandaloneToggleButton
+                                activity="writing"
+                                handleToggleChange={handleToggleChange}
+                                state={state}
+                                imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/writing.jpg"
+                            >
+                            </StandaloneToggleButton>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <StandaloneToggleButton
+                                activity="crafting"
+                                handleToggleChange={handleToggleChange}
+                                state={state}
+                                imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/crafting.jpg"
+                            >
+                            </StandaloneToggleButton>
+                        </Grid>
 
-
-                    {/*<Button*/}
-                    {/*    variant="contained"*/}
-                    {/*    color="secondary"*/}
-                    {/*    startIcon={<Avatar src={'http://www.wpsimplesponsorships.com/wp-content/uploads/2019/05/cropped-icon-256x256.png'} />}*/}
-                    {/*>*/}
-                    {/*    Delete*/}
-                    {/*</Button>*/}
-                    {/*<Grid container rowSpacing={0} columns={2} >*/}
-                    {/*    <Grid item xs={2}>*/}
-                    {/*        <ToggleButton value="center"*/}
-                    {/*                      className="toggleButton"*/}
-                    {/*                      aria-label="centered">*/}
-                    {/*        </ToggleButton>*/}
-                    {/*        <ToggleButton value="center"*/}
-                    {/*                      aria-label="centered">*/}
-                    {/*        </ToggleButton>*/}
-                    {/*    </Grid>*/}
-                    {/*</Grid>*/}
-                    {/*<Grid container rowSpacing={0} columns={2} >*/}
-                    {/*    <Grid item xs={2}>*/}
-                    {/*        <ToggleButton value="center"*/}
-                    {/*                      aria-label="centered">*/}
-                    {/*        </ToggleButton>*/}
-                    {/*        <ToggleButton value="center"*/}
-                    {/*                      aria-label="centered">*/}
-                    {/*        </ToggleButton>*/}
-                    {/*    </Grid>*/}
-                    {/*</Grid>*/}
-                    {/*<ToggleButtonGroup*/}
-                    {/*    // value={currentAlignment}*/}
-                    {/*    // onChange={(event, newAlignment) => {*/}
-                    {/*    //     setCurrentAlignment(newAlignment);*/}
-                    {/*    // }}*/}
-                    {/*    // exclusive*/}
-                    {/*    // aria-label="Demo Text Alignment"*/}
-                    {/*>*/}
-
-                    {/*    <ToggleButton value="left"*/}
-                    {/*                  aria-label="left aligned">*/}
-                    {/*    </ToggleButton>*/}
-                    {/*    <ToggleButton value="center"*/}
-                    {/*                  aria-label="centered">*/}
-                    {/*    </ToggleButton>*/}
-                    {/*</ToggleButtonGroup>*/}
-                    {/*<ToggleButtonGroup*/}
-                    {/*    value="Enter Your First Name"*/}
-                    {/*    onChange={handleToggleChange("firstName")}*/}
-                    {/*    // aria-label="text formatting"*/}
-                    {/*>*/}
-                    {/*    <ToggleButton value="bold" aria-label="bold">*/}
-                    {/*        <FormatBoldIcon/>*/}
-                    {/*    </ToggleButton>*/}
-                    {/*    <ToggleButton value="italic" aria-label="italic">*/}
-                    {/*        <FormatItalicIcon/>*/}
-                    {/*    </ToggleButton>*/}
-                    {/*    <ToggleButton value="underlined" aria-label="underlined">*/}
-                    {/*        <FormatUnderlinedIcon/>*/}
-                    {/*    </ToggleButton>*/}
-                    {/*    <ToggleButton value="color" aria-label="color" disabled>*/}
-                    {/*        <FormatColorFillIcon/>*/}
-                    {/*        <ArrowDropDownIcon/>*/}
-                    {/*    </ToggleButton>*/}
-                    {/*</ToggleButtonGroup>*/}
+                    </Grid>
                     <br/>
                     <ArrowForwardIcon
                         onClick={continues}

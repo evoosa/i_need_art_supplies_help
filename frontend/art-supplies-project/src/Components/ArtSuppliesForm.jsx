@@ -45,7 +45,7 @@ export class ArtSuppliesForm extends Component {
     handleChange = (input) => (e) => {
         this.setState({[input]: e.target.value});
         // console.log(input + " " + e.target.value)
-        console.log(e)
+        console.log(this.state)
     };
 
     handleArtTypeToggleChange = (key, val) => {
