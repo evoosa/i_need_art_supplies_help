@@ -5,6 +5,7 @@ import WelcomePage from "./WelcomePage";
 import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import MessyChoice from "./MessyChoice.jsx"
+import TogetherChoice from "./TogetherChoice.jsx"
 import Confirm from "./Confirm";
 import Success from "./Success";
 
@@ -98,6 +99,13 @@ export class ArtSuppliesForm extends Component {
                 case 6:
                 return (
                     <MessyChoice
+                        handleChoice={this.handleChoice}
+                        continues={this.continues}
+                    />
+                );
+                case 7:
+                return (
+                    <TogetherChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                     />
