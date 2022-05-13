@@ -19,7 +19,6 @@ export class ArtSuppliesForm extends Component {
             "writing": 1
         },
         compact: '1',
-        painting: '1',
         likesExperimenting: '1',
         messy: '1',
         together: '1',
@@ -36,30 +35,17 @@ export class ArtSuppliesForm extends Component {
         console.log(this.state)
     };
 
-    // Go back to prev step
-    back = (e) => {
-        e.preventDefault();
-        const {step} = this.state;
-        this.setState({
-            step: step - 1,
-        });
-    };
-
     // Handle fields change
     handleChoice = (e) => {
         this.state[e.target.name] = e.target.value
-        console.log(this.state)
     };
 
     handleArtTypeToggleChange = (key, val) => {
         this.state.preferredArtTypes[key] = val
-        console.log(this.state.preferredArtTypes)
     };
 
     render() {
         const {step} = this.state;
-        const {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet} = this.state;
-        const values = {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet};
         switch (step) {
             case 1:
                 return (
@@ -69,43 +55,43 @@ export class ArtSuppliesForm extends Component {
                 );
             case 2:
                 return (
-                    <SafeBetChoice
-                        handleChoice={this.handleChoice}
-                        continues={this.continues}
-                    />
-                );
-            case 3:
-                return (
                     <PreferredArtTypes
                         handleToggleChange={this.handleArtTypeToggleChange}
                         continues={this.continues}
                         state={this.state}
                     />
                 );
-            case 4:
+            case 3:
                 return (
                     <CompactChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                     />
                 );
-            case 5:
+            case 4:
                 return (
                     <LikesExperimentingChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                     />
                 );
-                case 6:
+            case 5:
                 return (
                     <MessyChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                     />
                 );
-                case 7:
+            case 6:
                 return (
                     <TogetherChoice
+                        handleChoice={this.handleChoice}
+                        continues={this.continues}
+                    />
+                );
+            case 7:
+                return (
+                    <SafeBetChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                     />

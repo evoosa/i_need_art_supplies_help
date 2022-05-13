@@ -25,6 +25,5 @@ export default function StandaloneToggleButton(props) {
         >
             {like} {props.activity}
         </button>
-    )
-        ;
+    );
 }
