@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {MuiThemeProvider} from "material-ui/styles";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 export class WelcomePage extends Component {
