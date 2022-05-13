@@ -5,37 +5,34 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-
-export class SafeBetChoice extends Component {
+export class CompactChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
         return (
             <MuiThemeProvider>
                 <React.Fragment>
-                    <h1 className={"header"}>first of all - are you afraid of your spouse and prefer a safe bet?</h1>
-                    <h2 className={"subHeader"}>I don't recommend a safe bet since it narrows your options, but I get
-                        you 🤷</h2>
+                    <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
+                        indoors?</h1>
+                    <h2 className={"subHeader"}>if she'll carry them with her, she'll need them to be compact</h2>
                     <br/>
                     <RadioGroup
                         className="choiceRadioGroup"
-                        defaultValue="1"
-                        name="safeBet"
+                        defaultValue="2"
+                        name="compact"
                         onChange={handleChoice}
                     >
                         <FormControlLabel
-                            value="1"
-                            control={<Radio/>}
-                            sx={{
-                                color: "green"
-                            }}
-                            label="No 😊"/>
-                        <FormControlLabel
                             value="0"
                             control={<Radio/>}
-                            sx={{
-                                color: "#de79b1"
-                            }}
-                            label="Yes, I prefer a Safe Bet"/>
+                            label="She'll carry the supplies with her"/>
+                        <FormControlLabel
+                            value="1"
+                            control={<Radio/>}
+                            label="She'll create only indoors"/>
+                        <FormControlLabel
+                            value="2"
+                            control={<Radio/>}
+                            label="Both are good"/>
                     </RadioGroup>
                     <br/>
                     <br/>
@@ -51,4 +48,4 @@ export class SafeBetChoice extends Component {
     }
 }
 
-export default SafeBetChoice;
+export default CompactChoice;

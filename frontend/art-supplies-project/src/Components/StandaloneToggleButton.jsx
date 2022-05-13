@@ -18,7 +18,7 @@ export default function StandaloneToggleButton(props) {
         <button
             className={"artTypesToggleButton"}
             value={val}
-            style={{"background-image": "url(' " + props.imageUrl + " ')"}}
+            style={{backgroundImage: "url(' " + props.imageUrl + " ')"}}
             onClick={toggleVal}
             onChange={props.handleToggleChange(props.activity, val)}
 

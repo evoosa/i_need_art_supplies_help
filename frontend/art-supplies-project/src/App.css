@@ -54,24 +54,39 @@ body {
 }
 
 .header {
+    /*!* ELEMENT *!*/
+    /*background-size: cover;*/
+    /*background-color: #5cbbcc;*/
+    /*height: auto;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*margin: auto;*/
+    /*border: 3px solid #4b9aa8;*/
+    /*padding: 10px 20px 10px 20px;*/
+    /*max-height: 90%;*/
+    /*max-width: 90%;*/
+    /*border-radius: 10px;*/
+
+    /*!* TEXT *!*/
+    /*color: white;*/
+    /*font-size: 25px;*/
+    /*max-font-size: 25px;*/
+    /*text-transform: capitalize;*/
+    /*font-weight: bold;*/
+    /*margin-bottom: 10px;*/
     /* ELEMENT */
-    background-size: cover;
-    background-color: #5cbbcc;
     height: auto;
-    width: 100%;
     text-align: center;
     margin: auto;
-    border: 3px solid #4b9aa8;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 0px 10px;
     max-height: 90%;
-    max-width: 90%;
-    border-radius: 10px;
+    max-width: 100%;
+    border-radius: 5px;
 
     /* TEXT */
-    color: white;
-    font-size: 25px;
-    max-font-size: 25px;
-    text-transform: capitalize;
+    color: #5cbbcc;
+    font-size: 20px;
+    max-font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -85,7 +100,7 @@ body {
     padding: 10px;
     width: 100%;
     max-height: 90%;
-    max-width: 90%;
+    max-width: 100%;
     border-radius: 10px;
 
     /* TEXT */
@@ -100,6 +115,7 @@ body {
     padding: 10px 0px 20px 10px;
     text-align: left;
     font-weight: bold;
+    max-width: 90%;
     text-transform: none;
 }
 
@@ -107,6 +123,7 @@ body {
     padding: 0px 0px 0px 10px;
     text-align: left;
     color: #4a93a1;
+    max-width: 90%;
     text-transform: none;
     font-weight: bold;
 }
