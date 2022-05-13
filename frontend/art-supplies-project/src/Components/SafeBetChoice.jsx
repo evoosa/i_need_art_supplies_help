@@ -6,6 +6,15 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
+const style =
+    {
+        color: "#ffffff",
+        fontSize: "150px",
+        textTransform: "lowercase",
+        fontWeight: "bold",
+        fontFamily: "system-ui"
+    }
+
 export class SafeBetChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
@@ -24,21 +33,19 @@ export class SafeBetChoice extends Component {
                         onChange={handleChoice}
                     >
                         <FormControlLabel
-                            style={
-                                {
-                                    color: "#ffffff",
-                                    fontSize: "15px",
-                                    textTransform: "lowercase",
-                                    fontWeight: "bold",
-                                    fontFamily: "system-ui"
-                                }
-                            }
-                            value="0" control={<Radio/>}
-                            label="Yes, I prefer a Safe Bet"/>
-                        <FormControlLabel
                             value="1"
                             control={<Radio/>}
+                            sx={{
+                                color: "green"
+                            }}
                             label="No 😊"/>
+                        <FormControlLabel
+                            value="0"
+                            control={<Radio/>}
+                            sx={{
+                                color: "#de79b1"
+                            }}
+                            label="Yes, I prefer a Safe Bet"/>
                     </RadioGroup>
                     <br/>
                     <br/>

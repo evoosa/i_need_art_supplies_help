@@ -18,8 +18,7 @@ export class ArtSuppliesForm extends Component {
         likesExperimenting: '1',
         messy: '1',
         together: '1',
-        safeBet: '1',
-        email: ''
+        safeBet: '1'
     };
 
     // Proceed to next step
@@ -54,22 +53,22 @@ export class ArtSuppliesForm extends Component {
 
     render() {
         const {step} = this.state;
-        const {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet, email} = this.state;
-        const values = {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet, email};
+        const {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet} = this.state;
+        const values = {preferredArtTypes, compact, likesExperimenting, messy, together, safeBet};
         switch (step) {
             case 1:
+                return (
+                    <SafeBetChoice
+                        handleChoice={this.handleChoice}
+                        continues={this.continues}
+                    />
+                );
+            case 2:
                 return (
                     <PreferredArtTypes
                         handleToggleChange={this.handleArtTypeToggleChange}
                         continues={this.continues}
                         state={this.state}
-                    />
-                );
-            case 2:
-                return (
-                    <SafeBetChoice
-                        handleChoice={this.handleChoice}
-                        continues={this.continues}
                     />
                 );
             case 3:
