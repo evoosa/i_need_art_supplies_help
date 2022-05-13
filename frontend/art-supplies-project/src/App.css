@@ -8,7 +8,7 @@ body {
 
 .userform {
     width: 90%;
-    max-width: 100%;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
@@ -23,10 +23,26 @@ body {
     box-shadow: 8px 8px #de79b1;
 }
 
+.phoneLadyImg {
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    float: center;
+    padding: 1%;
+    background: linear-gradient(white, #f6aee2);
+    color: #fff;
+    border: 3px solid #c769b5;
+    border-radius: 20px;
+    box-shadow: 8px 8px #de79b1;
+}
+
 .nextMenu {
     margin: 20px;
     cursor: pointer;
-    color: #5cbbcc;
+    color: #4b9aa8;
 }
 
 .nextMenu:hover {
@@ -34,7 +50,7 @@ body {
     border-radius: 90%;
     cursor: pointer;
     color: white;
-    background-color: #5cbbcc;
+    background-color: #4b9aa8;
 }
 
 .header {
@@ -42,6 +58,7 @@ body {
     background-size: cover;
     background-color: #5cbbcc;
     height: auto;
+    width: 100%;
     text-align: center;
     margin: auto;
     border: 3px solid #4b9aa8;
@@ -66,7 +83,7 @@ body {
     text-align: center;
     margin: auto;
     padding: 10px;
-    width: 80%;
+    width: 100%;
     max-height: 90%;
     max-width: 90%;
     border-radius: 10px;
@@ -77,6 +94,39 @@ body {
     max-font-size: 15px;
     text-transform: lowercase;
     font-weight: bold;
+}
+
+.mainSubHeader_1 {
+    padding: 10px 0px 20px 10px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.mainSubHeader_2 {
+    padding: 0px 0px 0px 10px;
+    text-align: left;
+    color: #4a93a1;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.mainHeader {
+    /* ELEMENT */
+    height: auto;
+    text-align: left;
+    margin: auto;
+    padding: 0px 20px 0px 10px;
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 5px;
+
+    /* TEXT */
+    color: #5cbbcc;
+    font-size: 25px;
+    max-font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .success {
@@ -96,16 +146,16 @@ body {
     /* ELEMENT */
     background-size: cover;
     border: 4px solid #b4b4b4;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     max-height: 90%;
     max-width: 90%;
     border-radius: 10px;
 
     /* TEXT */
     color: #d1f8ff;
-    max-font-size: 30px;
-    font-size: 20px;
+    /*max-font-size: 30px;*/
+    font-size: 100%;
     font-size-adjust: inherit;
     text-transform: uppercase;
     font-weight: bold;
@@ -116,7 +166,7 @@ body {
 .artTypesToggleButton:hover {
     color: white;
     border: 4px solid #c7026f;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
