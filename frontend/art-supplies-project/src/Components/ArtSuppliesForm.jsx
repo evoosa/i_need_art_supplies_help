@@ -3,6 +3,7 @@ import PreferredArtTypes from "./PreferredArtTypes";
 import SafeBetChoice from "./SafeBetChoice";
 import WelcomePage from "./WelcomePage";
 import CompactChoice from "./CompactChoice"
+import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import Confirm from "./Confirm";
 import Success from "./Success";
 
@@ -86,15 +87,22 @@ export class ArtSuppliesForm extends Component {
                         continues={this.continues}
                     />
                 );
-        //     case 4:
-        //         return (
-        //             <Confirm
-        //                 values={values}
-        //                 continues={this.continues}
-        //             />
-        //         );
-        //     case 5:
-        //         return <Success/>;
+            case 5:
+                return (
+                    <LikesExperimentingChoice
+                        handleChoice={this.handleChoice}
+                        continues={this.continues}
+                    />
+                );
+            //     case 4:
+            //         return (
+            //             <Confirm
+            //                 values={values}
+            //                 continues={this.continues}
+            //             />
+            //         );
+            //     case 5:
+            //         return <Success/>;
         }
     }
 }
