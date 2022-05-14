@@ -8,7 +8,7 @@ export class CompactChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
         return (
-            <React.Fragment>
+            <div>
                 <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
                     indoors?</h1>
                 <h2 className={"subHeader"}>if she'll carry them with her, she'll need them to be compact</h2>
@@ -39,7 +39,7 @@ export class CompactChoice extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

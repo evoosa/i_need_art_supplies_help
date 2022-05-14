@@ -9,7 +9,7 @@ export class LikesExperimentingChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
         return (
-            <React.Fragment>
+            <div>
                 <h1 className={"header"}>Does she like experimenting with new materials and techniques?</h1>
                 <br/>
                 <RadioGroup
@@ -38,7 +38,7 @@ export class LikesExperimentingChoice extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

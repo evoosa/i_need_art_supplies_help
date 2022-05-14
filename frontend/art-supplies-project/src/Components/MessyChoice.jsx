@@ -9,7 +9,7 @@ export class MessyChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
         return (
-            <React.Fragment>
+            <div>
                 <h1 className={"header"}>Is she ok with getting messy, or does she prefer cleanliness?</h1>
                 <h2 className={"subHeader"}>So I'll avoid recommending materials that might get her messy :^)</h2>
                 <br/>
@@ -35,7 +35,7 @@ export class MessyChoice extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

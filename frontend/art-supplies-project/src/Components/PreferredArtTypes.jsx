@@ -7,7 +7,7 @@ export class PreferredArtTypes extends Component {
     render() {
         const {handleToggleChange, continues, state} = this.props
         return (
-            <React.Fragment>
+            <div>
                 <h1 className={"header"}>what art types do you think that your spouse would like?</h1>
                 <h2 className={"subHeader"}>so I'll know which categories of art supplies I should recommend.</h2>
                 <br/>
@@ -67,7 +67,7 @@ export class PreferredArtTypes extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }
