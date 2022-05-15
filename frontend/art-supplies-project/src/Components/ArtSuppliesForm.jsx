@@ -12,12 +12,10 @@ import Success from "./Success";
 export class ArtSuppliesForm extends Component {
     state = {
         step: 1,
-        preferredArtTypes: {
-            "crafting": 1,
-            "painting": 1,
-            "sketching": 1,
-            "writing": 1
-        },
+        crafting: false,
+        painting: false,
+        sketching: false,
+        writing: false,
         compact: '1',
         likesExperimenting: '1',
         messy: '1',
@@ -35,14 +33,30 @@ export class ArtSuppliesForm extends Component {
         console.log(this.state)
     };
 
+    // Go back to prev step
+    back = (e) => {
+        e.preventDefault();
+        const {step} = this.state;
+        this.setState({
+            step: step - 1,
+        });
+        console.log(this.state)
+
+    };
+
     // Handle fields change
     handleChoice = (e) => {
         this.state[e.target.name] = e.target.value
     };
 
     handleArtTypeToggleChange = (key, val) => {
-        this.state.preferredArtTypes[key] = val
-    };
+        // let copyPAT = this.state.preferredArtTypes
+        // copyPAT[key] = val
+        // this.setState({preferredArtTypes: copyPAT})
+        this.state[key] = val
+        console.log(this.state)
+        // this.setState({key: val})
+    }
 
     render() {
         const {step} = this.state;
@@ -56,7 +70,8 @@ export class ArtSuppliesForm extends Component {
             case 2:
                 return (
                     <PreferredArtTypes
-                        handleToggleChange={this.handleArtTypeToggleChange}
+                        handleChoice={this.handleArtTypeToggleChange}
+                        back={this.back}
                         continues={this.continues}
                         state={this.state}
                     />
@@ -65,6 +80,7 @@ export class ArtSuppliesForm extends Component {
                 return (
                     <CompactChoice
                         handleChoice={this.handleChoice}
+                        back={this.back}
                         continues={this.continues}
                     />
                 );

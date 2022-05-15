@@ -1,29 +1,34 @@
 import React, {useState} from "react";
 
-export default function StandaloneToggleButton(props) {
-    const [selected, setSelected] = React.useState(false);
-    const [val, setVal] = useState("1");
-    const [like, setLike] = useState("")
-    const toggleVal = () => {
-        if (val === "0") {
-            setVal("1");
-            setLike("doesn't like")
-        } else {
-            setVal("0");
-            setLike("likes")
-        }
-        setSelected(!selected)
-    };
+const StandaloneToggleButton = (props) => {
+    const {stateKey, handleChoice, state} = props
+    const [value, setValue] = useState(false);
+    const currentValue = state[stateKey]
+    console.log(state[stateKey])
     return (
-        <button
-            className={"artTypesToggleButton"}
-            value={val}
-            style={{backgroundImage: "url(' " + props.imageUrl + " ')"}}
-            onClick={toggleVal}
-            onChange={props.handleToggleChange(props.activity, val)}
+        <>
+            <input
+                checked={currentValue}
+                onChange={() => {
+                    setValue(!value)
+                    handleChoice(stateKey, value);
+                    console.log(state[stateKey])
+                }}
+                type="checkbox"
+                className="react-switch-checkbox"
+                id={`react-switch-new`}
+            />
+            <label
+                style={{background: currentValue && '#06D6A0'}}
+                className="react-switch-label"
+                htmlFor={`react-switch-new`}
+            >
+                <span className={`react-switch-button`}/>
+            </label>
+        </>
 
-        >
-            {like} {props.activity}
-        </button>
     );
+
 }
+
+export default StandaloneToggleButton;

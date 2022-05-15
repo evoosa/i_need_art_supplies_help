@@ -3,10 +3,11 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class CompactChoice extends Component {
     render() {
-        const {handleChoice, continues} = this.props
+        const {handleChoice, back, continues} = this.props
         return (
             <div>
                 <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
@@ -34,6 +35,11 @@ export class CompactChoice extends Component {
                 </RadioGroup>
                 <br/>
                 <br/>
+                <ArrowBackIcon
+                    onClick={back}
+                    fontSize="large"
+                    className="nextMenu"
+                />
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
