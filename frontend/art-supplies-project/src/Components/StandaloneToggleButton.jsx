@@ -4,7 +4,6 @@ const StandaloneToggleButton = (props) => {
     const {stateKey, handleChoice, state} = props
     const [value, setValue] = useState(false);
     const currentValue = state[stateKey]
-    console.log(state[stateKey])
     return (
         <>
             <input
@@ -12,7 +11,6 @@ const StandaloneToggleButton = (props) => {
                 onChange={() => {
                     setValue(!value)
                     handleChoice(stateKey, value);
-                    console.log(state[stateKey])
                 }}
                 type="checkbox"
                 className="react-switch-checkbox"
