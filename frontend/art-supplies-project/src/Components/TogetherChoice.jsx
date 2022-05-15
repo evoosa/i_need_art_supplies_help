@@ -9,7 +9,7 @@ export class TogetherChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
         return (
-            <div>
+            <React.Fragment>
                 <h1 className={"header"}>are you guys into a one-time couples experience, or do you intend that
                     she'll use the materials to create by herself?</h1>
                 <h2 className={"subHeader"}>I have some ideas for art experiences you can enjoy together</h2>
@@ -40,7 +40,7 @@ export class TogetherChoice extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

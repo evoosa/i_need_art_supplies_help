@@ -11,7 +11,7 @@ export class Confirm extends Component {
             continues, back
         } = this.props;
         return (
-            <div>
+            <React.Fragment>
                 <AppBar title="Confirm User Details" iconClassNameLeft/>
                 <List>
                     <ListItem primaryText="First Name" secondaryText={firstName}/>
@@ -33,7 +33,7 @@ export class Confirm extends Component {
                     fontSize="large"
                     className="nextMenu"
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

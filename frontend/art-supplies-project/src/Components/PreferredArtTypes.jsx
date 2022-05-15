@@ -9,7 +9,7 @@ export class PreferredArtTypes extends Component {
     render() {
         const {handleChoice, back, continues, state} = this.props
         return (
-            <div>
+            <React.Fragment>
                 <h1 className={"header"}>what art types do you think that your spouse would like?</h1>
                 <h2 className={"subHeader"}>so I'll know which categories of art supplies I should recommend.</h2>
                 <br/>
@@ -17,6 +17,7 @@ export class PreferredArtTypes extends Component {
                 <StandaloneToggleButton
                     stateKey="painting"
                     handleChoice={handleChoice}
+                    imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/painting.jpg"
                     state={state}
                 >
                 </StandaloneToggleButton>
@@ -79,7 +80,7 @@ export class PreferredArtTypes extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -9,7 +9,7 @@ export class SafeBetChoice extends Component {
     render() {
         const {handleChoice, continues} = this.props
         return (
-            <div>
+            <React.Fragment>
                 <h1 className={"header"}>finally - are you afraid of your spouse and prefer a safe bet?</h1>
                 <h2 className={"subHeader"}>I don't recommend a safe bet since it narrows your options, but I get
                     you 🤷</h2>
@@ -39,7 +39,7 @@ export class SafeBetChoice extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -5,7 +5,7 @@ export class WelcomePage extends Component {
     render() {
         const {continues} = this.props
         return (
-            <div>
+            <React.Fragment>
                 <br/>
                 <h2 className={"subHeader mainSubHeader_1"}>"Hey Eva, I'd love to consult you, </h2>
                 <h1 className={"mainHeader"}>What art supplies should I buy my GF for her birthday? </h1>
@@ -23,7 +23,7 @@ export class WelcomePage extends Component {
                     fontSize='large'
                     className='nextMenu'
                 />
-            </div>
+            </React.Fragment>
         );
     }
 }
