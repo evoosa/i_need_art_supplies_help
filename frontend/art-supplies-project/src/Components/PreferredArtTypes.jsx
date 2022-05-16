@@ -30,7 +30,6 @@ export class PreferredArtTypes extends Component {
                     <Grid item xs={1}>
                         <StandaloneToggleButton
                             stateKey="sketching"
-                            // stateKey="sketching"
                             handleChoice={handleChoice}
                             imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/sketching.jpg"
                             state={state}
