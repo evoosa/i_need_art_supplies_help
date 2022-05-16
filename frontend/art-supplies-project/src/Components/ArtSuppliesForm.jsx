@@ -41,7 +41,6 @@ export class ArtSuppliesForm extends Component {
             step: step - 1,
         });
         console.log(this.state)
-
     };
 
     // Handle fields change
@@ -50,12 +49,7 @@ export class ArtSuppliesForm extends Component {
     };
 
     handleArtTypeToggleChange = (key, val) => {
-        // let copyPAT = this.state.preferredArtTypes
-        // copyPAT[key] = val
-        // this.setState({preferredArtTypes: copyPAT})
         this.state[key] = val
-        // this.setState({key: val})
-        console.log(this.state)
     }
 
     render() {
@@ -82,6 +76,7 @@ export class ArtSuppliesForm extends Component {
                         handleChoice={this.handleChoice}
                         back={this.back}
                         continues={this.continues}
+                        state={this.state}
                     />
                 );
             case 4:
@@ -89,6 +84,7 @@ export class ArtSuppliesForm extends Component {
                     <LikesExperimentingChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
+                        state={this.state}
                     />
                 );
             case 5:
@@ -96,6 +92,7 @@ export class ArtSuppliesForm extends Component {
                     <MessyChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
+                        state={this.state}
                     />
                 );
             case 6:
@@ -103,6 +100,7 @@ export class ArtSuppliesForm extends Component {
                     <TogetherChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
+                        state={this.state}
                     />
                 );
             case 7:
@@ -110,6 +108,7 @@ export class ArtSuppliesForm extends Component {
                     <SafeBetChoice
                         handleChoice={this.handleChoice}
                         continues={this.continues}
+                        state={this.state}
                     />
                 );
             //     case 4:

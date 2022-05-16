@@ -7,7 +7,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class CompactChoice extends Component {
     render() {
-        const {handleChoice, back, continues} = this.props
+        const {handleChoice, back, continues, state} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
@@ -16,7 +16,7 @@ export class CompactChoice extends Component {
                 <br/>
                 <RadioGroup
                     className="choice-radio-group"
-                    defaultValue="2"
+                    defaultValue={state["compact"]}
                     name="compact"
                     onChange={handleChoice}
                 >

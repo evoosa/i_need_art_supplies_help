@@ -1,6 +1,7 @@
 
 body {
-    background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");
+    background: url("https://art-supplies.s3.eu-central-1.amazonaws.com/penscribble.jpg");
+    /*background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");*/
     font-family: system-ui;
 }
 
@@ -134,13 +135,6 @@ body {
     width: 80%;
     font-size: 150px;
     color: #de79b1;
-}
-
-.image-grid-column {
-    height: 90%;
-    width: 90%;
-    max-height: 90%;
-    max-width: 90%;
 }
 
 .art-types-button-image-box {

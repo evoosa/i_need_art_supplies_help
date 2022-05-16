@@ -7,7 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export class MessyChoice extends Component {
     render() {
-        const {handleChoice, continues} = this.props
+        const {handleChoice, continues, state} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>Is she ok with getting messy, or does she prefer cleanliness?</h1>
@@ -15,7 +15,7 @@ export class MessyChoice extends Component {
                 <br/>
                 <RadioGroup
                     className="choice-radio-group"
-                    defaultValue="0"
+                    defaultValue={state["messy"]}
                     name="messy"
                     onChange={handleChoice}
                 >

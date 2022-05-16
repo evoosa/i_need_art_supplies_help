@@ -7,7 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export class SafeBetChoice extends Component {
     render() {
-        const {handleChoice, continues} = this.props
+        const {handleChoice, continues, state} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>finally - are you afraid of your spouse and prefer a safe bet?</h1>
@@ -16,7 +16,7 @@ export class SafeBetChoice extends Component {
                 <br/>
                 <RadioGroup
                     className="choice-radio-group"
-                    defaultValue="1"
+                    defaultValue={state["safeBet"]}
                     name="safeBet"
                     onChange={handleChoice}
                 >
