@@ -13,63 +13,59 @@ export class PreferredArtTypes extends Component {
                 <h1 className={"header"}>what art types do you think that your spouse would like?</h1>
                 <h2 className={"subHeader"}>so I'll know which categories of art supplies I should recommend.</h2>
                 <br/>
-
-                <StandaloneToggleButton
-                    stateKey="painting"
-                    handleChoice={handleChoice}
-                    imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/painting.jpg"
-                    state={state}
+                <Grid container columns={2}
+                      alignItems="center"
+                      justifyContent="center"
+                      direction="row"
                 >
-                </StandaloneToggleButton>
+                    <Grid item xs={1}>
+                        <StandaloneToggleButton
+                            stateKey="painting"
+                            handleChoice={handleChoice}
+                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/painting.jpg"
+                            state={state}
+                        >
+                        </StandaloneToggleButton>
+                    </Grid>
+                    <Grid item xs={1}>
+                        <StandaloneToggleButton
+                            stateKey="sketching"
+                            // stateKey="sketching"
+                            handleChoice={handleChoice}
+                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/sketching.jpg"
+                            state={state}
+                        >
+                        </StandaloneToggleButton>
+                    </Grid>
 
+                </Grid>
+                <br/>
+                <Grid container columns={2}
+                      alignItems="center"
+                      justifyContent="center"
+                      direction="row"
+                >
+                    <Grid item xs={1}>
+                        <StandaloneToggleButton
+                            stateKey="writing"
+                            handleChoice={handleChoice}
+                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/writing.jpg"
+                            state={state}
+                        >
+                        </StandaloneToggleButton>
+                    </Grid>
+                    <Grid item xs={1}>
+                        <StandaloneToggleButton
+                            stateKey="crafting"
+                            handleChoice={handleChoice}
+                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/crafting.jpg"
+                            state={state}
+                        >
+                        </StandaloneToggleButton>
+                    </Grid>
 
-                {/*<Grid container columns={2}*/}
-                {/*      alignItems="center"*/}
-                {/*      justifyContent="center"*/}
-                {/*      direction="row"*/}
-                {/*>*/}
-                {/*    <Grid item xs={1}>*/}
-                {/*        <StandaloneToggleButton*/}
-                {/*            activity="painting"*/}
-                {/*            handleToggleChange={handleToggleChange}*/}
-                {/*            imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/painting.jpg">*/}
-                {/*        </StandaloneToggleButton>*/}
-                {/*    </Grid>*/}
-                {/*    <Grid item xs={1}>*/}
-                {/*        <StandaloneToggleButton*/}
-                {/*            activity="sketching"*/}
-                {/*            handleToggleChange={handleToggleChange}*/}
-                {/*            imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/sketching.jpg"*/}
-                {/*        >*/}
-                {/*        </StandaloneToggleButton>*/}
-                {/*    </Grid>*/}
-
-                {/*</Grid>*/}
-                {/*<br/>*/}
-                {/*<Grid container columns={2}*/}
-                {/*      alignItems="center"*/}
-                {/*      justifyContent="center"*/}
-                {/*      direction="row"*/}
-                {/*>*/}
-                {/*    <Grid item xs={1}>*/}
-                {/*        <StandaloneToggleButton*/}
-                {/*            activity="writing"*/}
-                {/*            handleToggleChange={handleToggleChange}*/}
-                {/*            imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/writing.jpg"*/}
-                {/*        >*/}
-                {/*        </StandaloneToggleButton>*/}
-                {/*    </Grid>*/}
-                {/*    <Grid item xs={1}>*/}
-                {/*        <StandaloneToggleButton*/}
-                {/*            activity="crafting"*/}
-                {/*            handleToggleChange={handleToggleChange}*/}
-                {/*            imageUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/crafting.jpg"*/}
-                {/*        >*/}
-                {/*        </StandaloneToggleButton>*/}
-                {/*    </Grid>*/}
-
-                {/*</Grid>*/}
-                {/*<br/>*/}
+                </Grid>
+                <br/>
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"

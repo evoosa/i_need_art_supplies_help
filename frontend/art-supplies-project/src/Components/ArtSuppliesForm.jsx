@@ -54,8 +54,8 @@ export class ArtSuppliesForm extends Component {
         // copyPAT[key] = val
         // this.setState({preferredArtTypes: copyPAT})
         this.state[key] = val
-        console.log(this.state)
         // this.setState({key: val})
+        console.log(this.state)
     }
 
     render() {
