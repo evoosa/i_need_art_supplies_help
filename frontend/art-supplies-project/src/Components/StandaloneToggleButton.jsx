@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 export default function StandaloneToggleButton(props) {
     const {stateKey, handleChoice, imgUrl, state} = props
-    const [value, setValue] = useState(true);
+    const [value, setValue] = useState(!state[stateKey]);
     const currentValue = state[stateKey]
     const buttonId = "react-switch-new-" + stateKey
 
