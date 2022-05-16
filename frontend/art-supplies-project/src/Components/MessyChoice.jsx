@@ -11,10 +11,10 @@ export class MessyChoice extends Component {
         return (
             <React.Fragment>
                 <h1 className={"header"}>Is she ok with getting messy, or does she prefer cleanliness?</h1>
-                <h2 className={"subHeader"}>So I'll avoid recommending materials that might get her messy :^)</h2>
+                <h2 className={"sub-header"}>So I'll avoid recommending materials that might get her messy :^)</h2>
                 <br/>
                 <RadioGroup
-                    className="choiceRadioGroup"
+                    className="choice-radio-group"
                     defaultValue="0"
                     name="messy"
                     onChange={handleChoice}
@@ -33,7 +33,7 @@ export class MessyChoice extends Component {
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
-                    className='nextMenu'
+                    className='next-menu'
                 />
             </React.Fragment>
         );

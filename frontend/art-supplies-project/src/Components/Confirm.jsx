@@ -26,12 +26,12 @@ export class Confirm extends Component {
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"
-                    className="nextMenu"
+                    className="next-menu"
                 />
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize="large"
-                    className="nextMenu"
+                    className="next-menu"
                 />
             </React.Fragment>
         );

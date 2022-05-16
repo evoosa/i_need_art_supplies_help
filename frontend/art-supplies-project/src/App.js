@@ -4,7 +4,7 @@ import ArtSuppliesForm from './Components/ArtSuppliesForm'
 function App() {
   return (
     <>
-      <div className='userform'>
+      <div className='user-form'>
         <ArtSuppliesForm />
       </div>
     </>

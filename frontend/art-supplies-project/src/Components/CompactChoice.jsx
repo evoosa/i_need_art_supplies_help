@@ -12,10 +12,10 @@ export class CompactChoice extends Component {
             <React.Fragment>
                 <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
                     indoors?</h1>
-                <h2 className={"subHeader"}>if she'll carry them with her, she'll need them to be compact</h2>
+                <h2 className={"sub-header"}>if she'll carry them with her, she'll need them to be compact</h2>
                 <br/>
                 <RadioGroup
-                    className="choiceRadioGroup"
+                    className="choice-radio-group"
                     defaultValue="2"
                     name="compact"
                     onChange={handleChoice}
@@ -38,12 +38,12 @@ export class CompactChoice extends Component {
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"
-                    className="nextMenu"
+                    className="next-menu"
                 />
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
-                    className='nextMenu'
+                    className='next-menu'
                 />
             </React.Fragment>
         );

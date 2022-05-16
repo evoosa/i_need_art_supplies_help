@@ -7,21 +7,21 @@ export class WelcomePage extends Component {
         return (
             <React.Fragment>
                 <br/>
-                <h2 className={"subHeader mainSubHeader_1"}>"Hey Eva, I'd love to consult you, </h2>
-                <h1 className={"mainHeader"}>What art supplies should I buy my GF for her birthday? </h1>
-                <h2 className={"subHeader mainSubHeader_1"}>She showed interest in painting lately, and I wanna surprise
+                <h2 className={"sub-header main-sub-header-1"}>"Hey Eva, I'd love to consult you, </h2>
+                <h1 className={"main-header"}>What art supplies should I buy my GF for her birthday? </h1>
+                <h2 className={"sub-header main-sub-header-1"}>She showed interest in painting lately, and I wanna surprise
                     her. What
                     should I get her?"</h2>
-                <img className="phoneLadyImg" src="https://art-supplies.s3.eu-central-1.amazonaws.com/phone-lady.jpg"/>
+                <img className="phone-lady-img" src="https://art-supplies.s3.eu-central-1.amazonaws.com/phone-lady.jpg"/>
                 <br/>
                 <br/>
-                <h3 className={"subHeader mainSubHeader_2"}>Hmmm...</h3>
-                <h3 className={"subHeader mainSubHeader_2"}>I need to ask you some questions first.</h3>
+                <h3 className={"sub-header main-sub-header-2"}>Hmmm...</h3>
+                <h3 className={"sub-header main-sub-header-2"}>I need to ask you some questions first.</h3>
                 <br/>
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
-                    className='nextMenu'
+                    className='next-menu'
                 />
             </React.Fragment>
         );

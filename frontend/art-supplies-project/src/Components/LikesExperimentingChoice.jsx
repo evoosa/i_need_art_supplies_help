@@ -13,7 +13,7 @@ export class LikesExperimentingChoice extends Component {
                 <h1 className={"header"}>Does she like experimenting with new materials and techniques?</h1>
                 <br/>
                 <RadioGroup
-                    className="choiceRadioGroup"
+                    className="choice-radio-group"
                     defaultValue="0"
                     name="likesExperimenting"
                     onChange={handleChoice}
@@ -36,7 +36,7 @@ export class LikesExperimentingChoice extends Component {
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
-                    className='nextMenu'
+                    className='next-menu'
                 />
             </React.Fragment>
         );

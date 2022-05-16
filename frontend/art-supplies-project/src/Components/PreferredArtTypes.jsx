@@ -11,7 +11,7 @@ export class PreferredArtTypes extends Component {
         return (
             <React.Fragment>
                 <h1 className={"header"}>what art types do you think that your spouse would like?</h1>
-                <h2 className={"subHeader"}>so I'll know which categories of art supplies I should recommend.</h2>
+                <h2 className={"sub-header"}>so I'll know which categories of art supplies I should recommend.</h2>
                 <br/>
                 <Grid container columns={2}
                       alignItems="center"
@@ -68,12 +68,12 @@ export class PreferredArtTypes extends Component {
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"
-                    className="nextMenu"
+                    className="next-menu"
                 />
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
-                    className='nextMenu'
+                    className='next-menu'
                 />
             </React.Fragment>
         );

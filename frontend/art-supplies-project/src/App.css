@@ -1,20 +1,17 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");*/
 
 body {
     background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");
-    /*font-family: monaco, Consolas, "Lucida Console", monospace;*/
     font-family: system-ui;
 }
 
-.userform {
+.user-form {
     width: 90%;
-    max-width: 70%;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
     margin-bottom: 5%;
     text-align: center;
-    float: center;
     padding: 3%;
     background: linear-gradient(#d1f8ff, #f6aee2);
     color: #fff;
@@ -23,14 +20,13 @@ body {
     box-shadow: 8px 8px #de79b1;
 }
 
-.phoneLadyImg {
+.phone-lady-img {
     width: 90%;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
     margin-bottom: 5%;
-    float: center;
     padding: 1%;
     background: linear-gradient(white, #f6aee2);
     color: #fff;
@@ -39,13 +35,13 @@ body {
     box-shadow: 8px 8px #de79b1;
 }
 
-.nextMenu {
+.next-menu {
     margin: 20px;
     cursor: pointer;
     color: #4b9aa8;
 }
 
-.nextMenu:hover {
+.next-menu:hover {
     margin: 20px;
     border-radius: 90%;
     cursor: pointer;
@@ -71,7 +67,7 @@ body {
     margin-bottom: 10px;
 }
 
-.subHeader {
+.sub-header {
     /* ELEMENT */
     background-size: cover;
     height: auto;
@@ -91,7 +87,7 @@ body {
     font-weight: bold;
 }
 
-.mainSubHeader_1 {
+.main-sub-header-1 {
     padding: 10px 0px 20px 10px;
     text-align: left;
     font-weight: bold;
@@ -99,7 +95,7 @@ body {
     text-transform: none;
 }
 
-.mainSubHeader_2 {
+.main-sub-header-2 {
     padding: 0px 0px 0px 10px;
     text-align: left;
     color: #4a93a1;
@@ -108,7 +104,7 @@ body {
     font-weight: bold;
 }
 
-.mainHeader {
+.main-header {
     /* ELEMENT */
     height: auto;
     text-align: left;
@@ -131,7 +127,7 @@ body {
     margin: 30px;
 }
 
-.choiceRadioGroup {
+.choice-radio-group {
     /* ELEMENT */
     margin: auto;
     padding: 10px;
@@ -140,11 +136,18 @@ body {
     color: #de79b1;
 }
 
+.image-grid-column {
+    height: 90%;
+    width: 90%;
+    max-height: 90%;
+    max-width: 90%;
+}
+
 .art-types-button-image-box {
     background-size: cover;
     border: 4px solid #c769b5;
-    height: 200px;
-    width: 200px;
+    height: 90%;
+    width: 90%;
     max-height: 90%;
     max-width: 90%;
     border-radius: 10px;
@@ -167,6 +170,7 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
 .box {
     text-align: center;
     display: flex;
@@ -186,7 +190,10 @@ body {
     justify-content: space-between;
     cursor: pointer;
     width: 100px;
-    height: 50px;
+    max-width: 100px;
+    height: 80px;
+    max-height: 50px;
+
     background: grey;
     border-radius: 100px;
     position: relative;
