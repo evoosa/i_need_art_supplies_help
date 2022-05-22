@@ -135,6 +135,7 @@ body {
     font-size: 150px;
     color: #de79b1;
     text-align: left;
+    text-transform: lowercase;
 }
 
 

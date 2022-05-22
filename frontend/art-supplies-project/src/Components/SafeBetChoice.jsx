@@ -11,8 +11,7 @@ export class SafeBetChoice extends Component {
         return (
             <React.Fragment>
                 <h1 className={"header"}>finally - are you afraid of your spouse and prefer a safe bet?</h1>
-                <h2 className={"sub-header"}>I don't recommend a safe bet since it narrows your options, but I get
-                    you 🤷</h2>
+                <h2 className={"sub-header"}>I don't recommend a safe bet since it narrows your options, but I get you 🤷</h2>
                 <br/>
                 <RadioGroup
                     sx={sx_override}
@@ -27,7 +26,7 @@ export class SafeBetChoice extends Component {
                         sx={{
                             color: "green"
                         }}
-                        label="No 😊"/>
+                        label="No 😁"/>
                     <FormControlLabel
                         value="0"
                         control={<Radio/>}

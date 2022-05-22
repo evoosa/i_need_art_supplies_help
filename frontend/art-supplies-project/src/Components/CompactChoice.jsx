@@ -11,9 +11,8 @@ export class CompactChoice extends Component {
         const {handleChoice, back, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
-                <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
-                    indoors?</h1>
-                <h2 className={"sub-header"}>if she'll carry them with her, she'll need them to be compact</h2>
+                <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them indoors?</h1>
+                <h2 className={"sub-header"}>if she'll carry them with her ,I'll recommend you compact art supplies. </h2>
                 <br/>
                 <RadioGroup
                     sx={sx_override}
@@ -23,18 +22,17 @@ export class CompactChoice extends Component {
                     onChange={handleChoice}
                 >
                     <FormControlLabel
+                        value="2"
+                        control={<Radio/>}
+                        label="Both options are fine"/>
+                    <FormControlLabel
                         value="0"
-                        // sx={}
                         control={<Radio/>}
                         label="She'll carry the supplies with her"/>
                     <FormControlLabel
                         value="1"
                         control={<Radio/>}
                         label="She'll create only indoors"/>
-                    <FormControlLabel
-                        value="2"
-                        control={<Radio/>}
-                        label="Both are good"/>
                 </RadioGroup>
                 <br/>
                 <br/>

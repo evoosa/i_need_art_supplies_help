@@ -3,14 +3,13 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Grid from '@mui/material/Grid';
 import StandaloneToggleButton from "./StandaloneToggleButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ToggleButton from "@mui/material/ToggleButton";
 
 export class PreferredArtTypes extends Component {
     render() {
-        const {handleChoice, back, continues, state, sx_override} = this.props
+        const {handleChoice, back, continues, state} = this.props
         return (
             <React.Fragment>
-                <h1 className={"header"}>what art types do you think that your spouse would like?</h1>
+                <h1 className={"header"}>which types of art do you think your spouse would like? </h1>
                 <h2 className={"sub-header"}>so I'll know which categories of art supplies I should recommend.</h2>
                 <br/>
                 <Grid container columns={2}

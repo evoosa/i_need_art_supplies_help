@@ -23,11 +23,14 @@ export class MessyChoice extends Component {
                     <FormControlLabel
                         value="0"
                         control={<Radio/>}
-                        label="She's OK with getting messy"/>
+                        sx={{
+                            color: "brown"
+                        }}
+                        label="She's OK with getting messy 💩"/>
                     <FormControlLabel
                         value="1"
                         control={<Radio/>}
-                        label="She preferrs cleanliness"/>
+                        label="She prefers cleanliness"/>
                 </RadioGroup>
                 <br/>
                 <br/>

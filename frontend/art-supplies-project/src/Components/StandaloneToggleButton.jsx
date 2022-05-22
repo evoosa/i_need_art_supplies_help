@@ -8,7 +8,6 @@ export default function StandaloneToggleButton(props) {
 
     function onChange() {
         setValue(!value)
-        console.log(stateKey)
         handleChoice(stateKey, value)
     }
 

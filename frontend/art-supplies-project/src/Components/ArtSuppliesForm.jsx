@@ -6,8 +6,6 @@ import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import MessyChoice from "./MessyChoice.jsx"
 import TogetherChoice from "./TogetherChoice.jsx"
-import Confirm from "./Confirm";
-import Success from "./Success";
 
 export class ArtSuppliesForm extends Component {
     state = {
@@ -16,10 +14,10 @@ export class ArtSuppliesForm extends Component {
         painting: false,
         sketching: false,
         writing: false,
-        compact: '1',
-        likesExperimenting: '1',
-        messy: '1',
-        together: '1',
+        compact: '2',
+        likesExperimenting: '0',
+        messy: '0',
+        together: '2',
         safeBet: '1'
     };
 
@@ -122,13 +120,6 @@ export class ArtSuppliesForm extends Component {
                         sx_override={this.radio_button_sx_override}
                     />
                 );
-            //     case 4:
-            //         return (
-            //             <Confirm
-            //                 values={values}
-            //                 continues={this.continues}
-            //             />
-            //         );
             //     case 5:
             //         return <Success/>;
         }
