@@ -21,7 +21,7 @@ export class PreferredArtTypes extends Component {
                         <ArtTypeToggleButton
                             stateKey="painting"
                             handleChoice={handleChoice}
-                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/painting.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/painting_compressed.webp"
                             state={state}
                         >
                         </ArtTypeToggleButton>
@@ -30,7 +30,7 @@ export class PreferredArtTypes extends Component {
                         <ArtTypeToggleButton
                             stateKey="sketching"
                             handleChoice={handleChoice}
-                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/sketching.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/sketching_compressed.webp"
                             state={state}
                         >
                         </ArtTypeToggleButton>
@@ -47,7 +47,7 @@ export class PreferredArtTypes extends Component {
                         <ArtTypeToggleButton
                             stateKey="writing"
                             handleChoice={handleChoice}
-                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/writing.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/writing_compressed.webp"
                             state={state}
                         >
                         </ArtTypeToggleButton>
@@ -56,7 +56,7 @@ export class PreferredArtTypes extends Component {
                         <ArtTypeToggleButton
                             stateKey="crafting"
                             handleChoice={handleChoice}
-                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/crafting.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/crafting_compressed.webp"
                             state={state}
                         >
                         </ArtTypeToggleButton>
