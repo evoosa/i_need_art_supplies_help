@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Grid from '@mui/material/Grid';
-import StandaloneToggleButton from "./StandaloneToggleButton"
+import ArtTypeToggleButton from "./ArtTypeToggleButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class PreferredArtTypes extends Component {
@@ -18,22 +18,22 @@ export class PreferredArtTypes extends Component {
                       direction="row"
                 >
                     <Grid item xs={1}>
-                        <StandaloneToggleButton
+                        <ArtTypeToggleButton
                             stateKey="painting"
                             handleChoice={handleChoice}
                             imgUrl="https://i-need-art-supplies-help-me.pasten.life/painting.jpg"
                             state={state}
                         >
-                        </StandaloneToggleButton>
+                        </ArtTypeToggleButton>
                     </Grid>
                     <Grid item xs={1}>
-                        <StandaloneToggleButton
+                        <ArtTypeToggleButton
                             stateKey="sketching"
                             handleChoice={handleChoice}
                             imgUrl="https://i-need-art-supplies-help-me.pasten.life/sketching.jpg"
                             state={state}
                         >
-                        </StandaloneToggleButton>
+                        </ArtTypeToggleButton>
                     </Grid>
 
                 </Grid>
@@ -44,22 +44,22 @@ export class PreferredArtTypes extends Component {
                       direction="row"
                 >
                     <Grid item xs={1}>
-                        <StandaloneToggleButton
+                        <ArtTypeToggleButton
                             stateKey="writing"
                             handleChoice={handleChoice}
                             imgUrl="https://i-need-art-supplies-help-me.pasten.life/writing.jpg"
                             state={state}
                         >
-                        </StandaloneToggleButton>
+                        </ArtTypeToggleButton>
                     </Grid>
                     <Grid item xs={1}>
-                        <StandaloneToggleButton
+                        <ArtTypeToggleButton
                             stateKey="crafting"
                             handleChoice={handleChoice}
                             imgUrl="https://i-need-art-supplies-help-me.pasten.life/crafting.jpg"
                             state={state}
                         >
-                        </StandaloneToggleButton>
+                        </ArtTypeToggleButton>
                     </Grid>
 
                 </Grid>

@@ -22,7 +22,10 @@ export class LikesExperimentingChoice extends Component {
                     <FormControlLabel
                         value="0"
                         control={<Radio/>}
-                        label="Yes"/>
+                        sx={{
+                            color: "green"
+                        }}
+                        label="Yes 🥳"/>
                     <FormControlLabel
                         value="1"
                         control={<Radio/>}

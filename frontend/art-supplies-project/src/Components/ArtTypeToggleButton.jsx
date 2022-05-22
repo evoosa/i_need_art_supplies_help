@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function StandaloneToggleButton(props) {
+export default function ArtTypeToggleButton(props) {
     const {stateKey, handleChoice, imgUrl, state} = props
     const [value, setValue] = useState(!state[stateKey]);
     const currentValue = state[stateKey]

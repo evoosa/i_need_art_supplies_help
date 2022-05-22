@@ -11,7 +11,7 @@ export class MessyChoice extends Component {
         return (
             <React.Fragment>
                 <h1 className={"header"}>Is she ok with getting messy, or does she prefer cleanliness?</h1>
-                <h2 className={"sub-header"}>So I'll avoid recommending materials that might get her messy :^)</h2>
+                <h2 className={"sub-header"}>So I'll avoid recommending materials that might get her messy 😜</h2>
                 <br/>
                 <RadioGroup
                     sx={sx_override}
