@@ -22,7 +22,7 @@ export class PreferredArtTypes extends Component {
                         <StandaloneToggleButton
                             stateKey="painting"
                             handleChoice={handleChoice}
-                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/painting.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/painting.jpg"
                             state={state}
                         >
                         </StandaloneToggleButton>
@@ -31,7 +31,7 @@ export class PreferredArtTypes extends Component {
                         <StandaloneToggleButton
                             stateKey="sketching"
                             handleChoice={handleChoice}
-                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/sketching.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/sketching.jpg"
                             state={state}
                         >
                         </StandaloneToggleButton>
@@ -48,7 +48,7 @@ export class PreferredArtTypes extends Component {
                         <StandaloneToggleButton
                             stateKey="writing"
                             handleChoice={handleChoice}
-                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/writing.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/writing.jpg"
                             state={state}
                         >
                         </StandaloneToggleButton>
@@ -57,7 +57,7 @@ export class PreferredArtTypes extends Component {
                         <StandaloneToggleButton
                             stateKey="crafting"
                             handleChoice={handleChoice}
-                            imgUrl="https://art-supplies.s3.eu-central-1.amazonaws.com/crafting.jpg"
+                            imgUrl="https://i-need-art-supplies-help-me.pasten.life/crafting.jpg"
                             state={state}
                         >
                         </StandaloneToggleButton>
