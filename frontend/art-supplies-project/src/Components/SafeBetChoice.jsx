@@ -10,7 +10,7 @@ export class SafeBetChoice extends Component {
         const {handleChoice, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
-                <h1 className={"header"}>finally - are you afraid of your spouse and prefer a safe bet?</h1>
+                <h1 className={"header"}>finally - are you afraid of your partner and prefer a safe bet?</h1>
                 <h2 className={"sub-header"}>I don't recommend a safe bet since it narrows your options, but I get you 🤷</h2>
                 <br/>
                 <RadioGroup

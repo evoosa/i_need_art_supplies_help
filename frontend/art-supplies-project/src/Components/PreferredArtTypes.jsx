@@ -9,7 +9,7 @@ export class PreferredArtTypes extends Component {
         const {handleChoice, back, continues, state} = this.props
         return (
             <React.Fragment>
-                <h1 className={"header"}>which types of art do you think your spouse would like? </h1>
+                <h1 className={"header"}>which types of art do you think your partner would like? </h1>
                 <h2 className={"sub-header"}>so I'll know which categories of art supplies I should recommend.</h2>
                 <br/>
                 <Grid container columns={2}
