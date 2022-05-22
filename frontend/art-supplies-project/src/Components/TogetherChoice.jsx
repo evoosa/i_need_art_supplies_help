@@ -7,7 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export class TogetherChoice extends Component {
     render() {
-        const {handleChoice, continues, state} = this.props
+        const {handleChoice, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>are you guys into a one-time couples experience, or do you intend that
@@ -15,6 +15,7 @@ export class TogetherChoice extends Component {
                 <h2 className={"sub-header"}>I have some ideas for art experiences you can enjoy together</h2>
                 <br/>
                 <RadioGroup
+                    sx={sx_override}
                     className="choice-radio-group"
                     defaultValue={state["together"]}
                     name="together"

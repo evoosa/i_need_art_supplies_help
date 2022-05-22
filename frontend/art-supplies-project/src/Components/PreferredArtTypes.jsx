@@ -7,7 +7,7 @@ import ToggleButton from "@mui/material/ToggleButton";
 
 export class PreferredArtTypes extends Component {
     render() {
-        const {handleChoice, back, continues, state} = this.props
+        const {handleChoice, back, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>what art types do you think that your spouse would like?</h1>

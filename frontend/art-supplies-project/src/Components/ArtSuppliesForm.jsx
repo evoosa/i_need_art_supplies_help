@@ -23,6 +23,12 @@ export class ArtSuppliesForm extends Component {
         safeBet: '1'
     };
 
+    radio_button_sx_override = {
+        '& .MuiFormControlLabel-label': {
+            fontFamily: 'system-ui',
+        },
+    }
+
     // Proceed to next step
     continues = (e) => {
         e.preventDefault();
@@ -77,6 +83,7 @@ export class ArtSuppliesForm extends Component {
                         back={this.back}
                         continues={this.continues}
                         state={this.state}
+                        sx_override={this.radio_button_sx_override}
                     />
                 );
             case 4:
@@ -85,6 +92,7 @@ export class ArtSuppliesForm extends Component {
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                         state={this.state}
+                        sx_override={this.radio_button_sx_override}
                     />
                 );
             case 5:
@@ -93,6 +101,7 @@ export class ArtSuppliesForm extends Component {
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                         state={this.state}
+                        sx_override={this.radio_button_sx_override}
                     />
                 );
             case 6:
@@ -101,6 +110,7 @@ export class ArtSuppliesForm extends Component {
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                         state={this.state}
+                        sx_override={this.radio_button_sx_override}
                     />
                 );
             case 7:
@@ -109,6 +119,7 @@ export class ArtSuppliesForm extends Component {
                         handleChoice={this.handleChoice}
                         continues={this.continues}
                         state={this.state}
+                        sx_override={this.radio_button_sx_override}
                     />
                 );
             //     case 4:

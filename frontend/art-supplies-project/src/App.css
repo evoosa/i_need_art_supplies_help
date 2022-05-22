@@ -129,13 +129,14 @@ body {
 }
 
 .choice-radio-group {
-    /* ELEMENT */
     margin: auto;
     padding: 10px;
     width: 80%;
     font-size: 150px;
     color: #de79b1;
+    text-align: left;
 }
+
 
 .art-types-button-image-box {
     background-size: cover;

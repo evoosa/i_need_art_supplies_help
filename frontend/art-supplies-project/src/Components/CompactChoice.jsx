@@ -5,9 +5,10 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
+
 export class CompactChoice extends Component {
     render() {
-        const {handleChoice, back, continues, state} = this.props
+        const {handleChoice, back, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them
@@ -15,6 +16,7 @@ export class CompactChoice extends Component {
                 <h2 className={"sub-header"}>if she'll carry them with her, she'll need them to be compact</h2>
                 <br/>
                 <RadioGroup
+                    sx={sx_override}
                     className="choice-radio-group"
                     defaultValue={state["compact"]}
                     name="compact"
@@ -22,6 +24,7 @@ export class CompactChoice extends Component {
                 >
                     <FormControlLabel
                         value="0"
+                        // sx={}
                         control={<Radio/>}
                         label="She'll carry the supplies with her"/>
                     <FormControlLabel
@@ -45,6 +48,7 @@ export class CompactChoice extends Component {
                     fontSize='large'
                     className='next-menu'
                 />
+
             </React.Fragment>
         );
     }

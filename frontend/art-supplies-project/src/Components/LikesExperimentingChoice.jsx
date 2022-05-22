@@ -7,12 +7,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export class LikesExperimentingChoice extends Component {
     render() {
-        const {handleChoice, continues, state} = this.props
+        const {handleChoice, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>Does she like experimenting with new materials and techniques?</h1>
                 <br/>
                 <RadioGroup
+                    sx={sx_override}
                     className="choice-radio-group"
                     defaultValue={state["likesExperimenting"]}
                     name="likesExperimenting"
