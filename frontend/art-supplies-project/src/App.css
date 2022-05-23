@@ -217,3 +217,32 @@ body {
 .react-switch-label:active .react-switch-button {
     width: 60px;
 }
+
+.yes-btn {
+    border: 3px solid #c769b5;
+    border-radius: 100%;
+    font-size: 35px;
+    cursor: pointer;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    text-align: center;
+    padding: 0px;
+    background: linear-gradient(#d1f8ff, #f6aee2);
+    color: #fff;
+    box-shadow: 8px 8px #de79b1;
+}
+
+.yes-btn:hover {
+    border: 3px solid green;
+    opacity: 60%;
+    color: green;
+}
+
+.yes-btn:active {
+    background: linear-gradient(#ffffff, #5cbbcc);
+    border: 3px solid green;
+    opacity: 60%;
+    color: green;
+}

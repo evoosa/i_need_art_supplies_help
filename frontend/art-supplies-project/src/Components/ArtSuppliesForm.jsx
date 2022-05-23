@@ -6,6 +6,7 @@ import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import MessyChoice from "./MessyChoice.jsx"
 import TogetherChoice from "./TogetherChoice.jsx"
+import GetResults from "./GetResults.jsx"
 
 export class ArtSuppliesForm extends Component {
     state = {
@@ -64,6 +65,10 @@ export class ArtSuppliesForm extends Component {
                     <WelcomePage
                         continues={this.continues}
                     />
+                    // <GetResults
+                    //     back={this.back}
+                    //     state={this.state}
+                    // />
                 );
             case 2:
                 return (
@@ -124,8 +129,13 @@ export class ArtSuppliesForm extends Component {
                         sx_override={this.radio_button_sx_override}
                     />
                 );
-            //     case 5:
-            //         return <Success/>;
+            case 8:
+                return (
+                    <GetResults
+                        back={this.back}
+                        state={this.state}
+                    />
+                );
         }
     }
 }
