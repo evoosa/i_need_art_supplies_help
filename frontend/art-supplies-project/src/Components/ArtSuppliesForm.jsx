@@ -88,6 +88,7 @@ export class ArtSuppliesForm extends Component {
                 return (
                     <LikesExperimentingChoice
                         handleChoice={this.handleChoice}
+                        back={this.back}
                         continues={this.continues}
                         state={this.state}
                         sx_override={this.radio_button_sx_override}
@@ -97,6 +98,7 @@ export class ArtSuppliesForm extends Component {
                 return (
                     <MessyChoice
                         handleChoice={this.handleChoice}
+                        back={this.back}
                         continues={this.continues}
                         state={this.state}
                         sx_override={this.radio_button_sx_override}
@@ -106,6 +108,7 @@ export class ArtSuppliesForm extends Component {
                 return (
                     <TogetherChoice
                         handleChoice={this.handleChoice}
+                        back={this.back}
                         continues={this.continues}
                         state={this.state}
                         sx_override={this.radio_button_sx_override}
@@ -115,6 +118,7 @@ export class ArtSuppliesForm extends Component {
                 return (
                     <SafeBetChoice
                         handleChoice={this.handleChoice}
+                        back={this.back}
                         continues={this.continues}
                         state={this.state}
                         sx_override={this.radio_button_sx_override}

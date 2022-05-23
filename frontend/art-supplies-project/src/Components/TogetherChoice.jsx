@@ -3,11 +3,12 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 
 export class TogetherChoice extends Component {
     render() {
-        const {handleChoice, continues, state, sx_override} = this.props
+        const {handleChoice, back, continues, state, sx_override} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>are you guys into a one-time couples experience, or do you intend for her to use the materials to create by herself?</h1>
@@ -35,6 +36,11 @@ export class TogetherChoice extends Component {
                 </RadioGroup>
                 <br/>
                 <br/>
+                <ArrowBackIcon
+                    onClick={back}
+                    fontSize="large"
+                    className="next-menu"
+                />
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
