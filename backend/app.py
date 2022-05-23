@@ -1,6 +1,8 @@
+from flask import Flask
 from models.recommendation import recommendation
 
-# '0' = true, 1 = false, 2 = both
+app = Flask(__name__)
+
 test_answer = {
     'compact': '0',  # indoors / outdoors / NM
     'preferred_art_types': ['crafting', 'sketching', 'painting'],
@@ -10,8 +12,13 @@ test_answer = {
     'safe_bet': '1'
 }
 
-if __name__ == '__main__':
+
+@app.route('/get_recommended_art_supplies')
+def hello():
     rec = recommendation(test_answer)
     rec.get_recommended_groups()
-    print(rec.recommended_art_supplies.keys())
+    return {key: val.attributes for (key, val) in rec.recommended_art_supplies.items()}
 
+
+if __name__ == '__main__':
+    app.run('localhost', 6969)
