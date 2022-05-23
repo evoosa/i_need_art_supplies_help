@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-
+import GetResultsFromServer from "./GetResultsFromServer.jsx"
 
 export class GetResults extends Component {
     render() {
@@ -9,7 +9,12 @@ export class GetResults extends Component {
             <React.Fragment>
                 <h1 className={"header"}>ARE YOU READY FOR THE RESULTS ? 🤯</h1>
                 <br/>
-                <button className="yes-btn">Kind Off 🧐</button>
+                <button
+                    className="yes-btn"
+                    onClick={() => {
+                        GetResultsFromServer(state)
+                    }}
+                >Kind Off 🧐</button>
 
                 <br/>
                 <br/>

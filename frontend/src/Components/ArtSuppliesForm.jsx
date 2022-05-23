@@ -62,13 +62,13 @@ export class ArtSuppliesForm extends Component {
         switch (step) {
             case 1:
                 return (
-                    <WelcomePage
-                        continues={this.continues}
-                    />
-                    // <GetResults
-                    //     back={this.back}
-                    //     state={this.state}
+                    // <WelcomePage
+                    //     continues={this.continues}
                     // />
+                    <GetResults
+                        back={this.back}
+                        state={this.state}
+                    />
                 );
             case 2:
                 return (
