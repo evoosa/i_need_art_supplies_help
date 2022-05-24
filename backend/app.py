@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, request, jsonify
 from flask_cors import CORS
+import pprint
 
 from models.recommendation import recommendation
 
@@ -20,8 +21,14 @@ test_answer = {
 @app.route('/get_recommended_art_supplies', methods=['GET', 'POST'])
 def get_recommended_art_supplies():
     if request.method == 'POST':
-        response = jsonify({'some': 'data'})
-        response.headers.add('Access-Control-Allow-Origin', '*')
+        form_data = request.get_json()
+        pprint.pprint(form_data)
+        return 'ni'
+        # import ipdb
+        # ipdb.set_trace()
+        # response = jsonify(request.form)
+        # response.headers.add('Access-Control-Allow-Origin', '*')
+        # return response
         # rec = recommendation(request.form)
         # rec.get_recommended_groups()
         # return {key: val.attributes for (key, val) in rec.recommended_art_supplies.items()}
