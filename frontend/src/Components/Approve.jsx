@@ -1,19 +1,16 @@
 import React, {Component} from "react";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import GetResultsFromServer from "./Approvw.jsx"
 
-export class GetResults extends Component {
+export class Approve extends Component {
     render() {
-        const {back, state} = this.props
+        const {back, continues, state} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>ARE YOU READY FOR THE RESULTS ? 🤯</h1>
                 <br/>
                 <button
                     className="yes-btn"
-                    onClick={() => {
-                        GetResultsFromServer(state)
-                    }}
+                    onClick={continues}
                 >Kind Off 🧐</button>
 
                 <br/>
@@ -28,4 +25,4 @@ export class GetResults extends Component {
     }
 }
 
-export default GetResults;
+export default Approve;

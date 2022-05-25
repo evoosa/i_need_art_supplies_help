@@ -6,7 +6,8 @@ import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import MessyChoice from "./MessyChoice.jsx"
 import TogetherChoice from "./TogetherChoice.jsx"
-import GetResults from "./GetResults.jsx"
+import Approve from "./Approve.jsx"
+import GetResults from "./GetResults.jsx";
 
 export class ArtSuppliesForm extends Component {
     state = {
@@ -60,22 +61,32 @@ export class ArtSuppliesForm extends Component {
     render() {
         const {step} = this.state;
         switch (step) {
+            // case 1:
+            //     return (
+            //         <WelcomePage
+            //             continues={this.continues}
+            //         />
+            //     );
+            // case 2:
+            //     return (
+            //         <PreferredArtTypes
+            //             handleChoice={this.handleArtTypeToggleChange}
+            //             back={this.back}
+            //             continues={this.continues}
+            //             state={this.state}
+            //         />
+            //     );
             case 1:
                 return (
-                    // <WelcomePage
-                    //     continues={this.continues}
-                    // />
-                    <GetResults
+                    <Approve
                         back={this.back}
+                        continues={this.continues}
                         state={this.state}
                     />
                 );
             case 2:
                 return (
-                    <PreferredArtTypes
-                        handleChoice={this.handleArtTypeToggleChange}
-                        back={this.back}
-                        continues={this.continues}
+                    <GetResults
                         state={this.state}
                     />
                 );
@@ -131,8 +142,15 @@ export class ArtSuppliesForm extends Component {
                 );
             case 8:
                 return (
-                    <GetResults
+                    <Approve
                         back={this.back}
+                        continues={this.continues}
+                        state={this.state}
+                    />
+                );
+            case 9:
+                return (
+                    <GetResults
                         state={this.state}
                     />
                 );

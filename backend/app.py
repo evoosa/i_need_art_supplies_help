@@ -8,8 +8,10 @@ app = Flask(__name__)
 CORS(app, resources={r"/get_recommended_art_supplies": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+ART_TYPES = ['writing', 'crafting', 'sketching', 'painting']
+
 test_answer = {
-    'compact': '0',  # indoors / outdoors / NM
+    'compact': '0',
     'preferred_art_types': ['crafting', 'sketching', 'painting'],
     'likes_experimenting': '0',
     'messy': '0',
@@ -17,21 +19,40 @@ test_answer = {
     'safe_bet': '1'
 }
 
+test_response = {'compact': '2',
+                 'crafting': True,
+                 'likesExperimenting': '0',
+                 'messy': '0',
+                 'painting': True,
+                 'safeBet': '1',
+                 'sketching': False,
+                 'step': 1,
+                 'together': '2',
+                 'writing': False}
+
+
+def parse_response(response):
+    print(response)
+    test_answer = {
+        'compact': response['compact'],
+        'preferred_art_types': [art_type for art_type in ART_TYPES if response[art_type] == True],
+        'likes_experimenting': response['likesExperimenting'],
+        'messy': response['messy'],
+        'together': response['together'],
+        'safe_bet': response['safeBet']
+    }
+    return test_answer
+
 
 @app.route('/get_recommended_art_supplies', methods=['GET', 'POST'])
 def get_recommended_art_supplies():
     if request.method == 'POST':
-        form_data = request.get_json()
-        pprint.pprint(form_data)
-        return 'ni'
-        # import ipdb
-        # ipdb.set_trace()
-        # response = jsonify(request.form)
+        response_data = request.get_json()
+        parsed_response = parse_response(response_data)
         # response.headers.add('Access-Control-Allow-Origin', '*')
-        # return response
-        # rec = recommendation(request.form)
-        # rec.get_recommended_groups()
-        # return {key: val.attributes for (key, val) in rec.recommended_art_supplies.items()}
+        rec = recommendation(parsed_response)
+        rec.get_recommended_groups()
+        return {key: val.attributes for (key, val) in rec.recommended_art_supplies.items()}
 
 
 if __name__ == '__main__':
