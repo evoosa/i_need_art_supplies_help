@@ -1,31 +1,45 @@
-import React, {Component} from "react";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import GetResultsFromServer from "./GetResultsFromServer.jsx"
+import React from 'react';
+import {View} from 'react-native';
 
-export class GetResults extends Component {
+export default class Results extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: null
+        };
+    }
+
+    componentWillMount() {
+        this.GetResultsFromServer(state);
+    }
+
+    GetResultsFromServer(state) {
+        const requestOptions = {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(state)
+        };
+        fetch('http://localhost:6969/get_recommended_art_supplies', requestOptions)
+            // fetch('http://3.70.74.186:6969/get_recommended_art_supplies', requestOptions)
+            .then(response => console.log(response.json()))
+            .then((responseJson) => {
+                this.setState({data: responseJson})
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+
     render() {
-        const {back, state} = this.props
         return (
-            <React.Fragment>
-                <h1 className={"header"}>ARE YOU READY FOR THE RESULTS ? 🤯</h1>
-                <br/>
-                <button
-                    className="yes-btn"
-                    onClick={() => {
-                        GetResultsFromServer(state)
-                    }}
-                >Kind Off 🧐</button>
-
-                <br/>
-                <br/>
-                <ArrowBackIcon
-                    onClick={back}
-                    fontSize="large"
-                    className="next-menu"
-                />
-            </React.Fragment>
+            <View>
+                {/*{this.state.data ? <MyComponent data={this.state.data}/> : <MyLoadingComponnents/>}*/}
+                <div>
+                    {this.state.data}
+                </div>
+            </View>
         );
     }
 }
-
-export default GetResults;
