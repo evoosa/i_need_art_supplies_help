@@ -35,7 +35,7 @@ class recommendation():
         self.logger.info('*** handling experimental supplies ***')
         supplies_to_potentially_remove = []
         supplies_to_keep = []
-        if self.answer['likes_experimenting'] == '1':
+        if self.answer['likes_experimenting'] == '1' or self.answer['likes_experimenting'] == '2':
             for group in self.groups.keys():
                 if group not in self.answer['preferred_art_types']:
                     self.logger.debug(f'removing {group} since the spouse doesn\'t like it')
