@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 const Popup = props => {
     return (
         <div className="popup-box">
-            <div className="box">
+            <div className="popup-contents">
                 <span className="close-icon" onClick={props.handleClose}>x</span>
                 {props.content}
             </div>
@@ -12,23 +12,23 @@ const Popup = props => {
 };
 
 function PopupButton(props) {
-    const {art_supply_id, art_supply} = props
+    const {art_supply} = props
     const [isOpen, setIsOpen] = useState(false);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
     }
 
-    return <div className={"result-item"}>
+    return <div>
         <input
             type="button"
-            className={"result-item-text"}
-            value={art_supply_id}
+            className={"result-item-box"}
+            value={art_supply.material_name}
             onClick={togglePopup}
         />
         {isOpen && <Popup
             content={<>
-                <p>{art_supply.material_name}</p>
+                <p>{art_supply.description}</p>
             </>}
             handleClose={togglePopup}
         />}

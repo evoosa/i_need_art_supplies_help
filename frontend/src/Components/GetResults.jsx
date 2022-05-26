@@ -41,7 +41,7 @@ export class GetResults extends React.Component {
             return <div>
                 {Object.keys(this.state.data).map(key => {
                     return <PopupButton
-                        art_supply_id={key}
+                        key={key}
                         art_supply={this.state.data[key]}
                     ></PopupButton>
                     // <button
