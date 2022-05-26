@@ -235,30 +235,31 @@ body {
 }
 
 .yes-btn:hover {
-    border: 3px solid green;
-    opacity: 60%;
     color: green;
+    background: linear-gradient(#ffffff, #5cbbcc);
+    border: 3px solid green;
+    box-shadow: 8px 8px #005000;
+    opacity: 60%;
 }
 
 .yes-btn:active {
+    color: green;
     background: linear-gradient(#ffffff, #5cbbcc);
     border: 3px solid green;
+    box-shadow: 8px 8px #005000;
     opacity: 60%;
-    color: green;
 }
 
 
 .result-item {
     border: 3px solid #c769b5;
     border-radius: 10%;
-    font-size: 15px;
+    font-size: 25px;
     cursor: pointer;
     display: flex;
-    width: 250px;
+    width: 80%;
     height: 50px;
-    margin: auto;
-    /*padding-top: 2px;*/
-    /*padding-bottom: 2px;*/
+    margin: 2% auto;
     background: linear-gradient(#d1f8ff, #f6aee2);
     box-shadow: 8px 8px #de79b1;
     align-items: center;
@@ -276,12 +277,14 @@ body {
 
 .result-item:hover {
     border: 3px solid green;
+    box-shadow: 8px 8px #005000;
     opacity: 60%;
 }
 
 .result-item:active {
     background: linear-gradient(#ffffff, #5cbbcc);
     border: 3px solid green;
+    box-shadow: 8px 8px #005000;
     opacity: 60%;
 }
 
@@ -292,5 +295,4 @@ body {
 
 .result-item:active div {
     color: green;
-
 }

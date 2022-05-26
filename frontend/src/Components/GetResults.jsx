@@ -31,7 +31,6 @@ export class GetResults extends React.Component {
             });
     }
 
-
     render() {
         if (this.state.data === null) {
             return (
