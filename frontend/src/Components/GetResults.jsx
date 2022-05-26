@@ -43,21 +43,7 @@ export class GetResults extends React.Component {
                     return <PopupButton
                         key={key}
                         art_supply={this.state.data[key]}
-                    ></PopupButton>
-                    // <button
-                    //     className={"result-item"}
-                    //     key={key}
-                    // >
-                    //     <div className={"result-item-text"}>
-                    //         {this.state.data[key].material_name}
-                    //     </div>
-                    //     {/*{key}*/}
-                    //     {/*{key} : {this.state.data[key].messy}*/}
-                    // </button>
-                    // <PopupButton
-                    //     key={key}
-                    //     art_supply={this.state.data[key]}
-                    // />
+                    />
                 })}
             </div>
         }
