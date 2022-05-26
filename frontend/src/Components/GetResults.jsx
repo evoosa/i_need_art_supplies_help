@@ -20,23 +20,17 @@ export class GetResults extends React.Component {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(state)
         };
-        fetch('http://localhost:6969/get_recommended_art_supplies', requestOptions)
-            // fetch('http://3.70.74.186:6969/get_recommended_art_supplies', requestOptions)
+        // fetch('http://localhost:6969/get_recommended_art_supplies', requestOptions)
+        fetch('http://3.70.74.186:6969/get_recommended_art_supplies', requestOptions)
             .then((response) => response.json())
             .then((responseJson) => {
-                this.setState({ data : responseJson })
+                this.setState({data: responseJson})
             })
             .catch((error) => {
                 console.error(error);
             });
-            // .then(response => console.log(response.json()))
-            // .then((responseJson) => {
-            //     this.setState({data: responseJson})
-            // })
-            // .catch((error) => {
-            //     console.error(error);
-            // });
     }
+
 
     render() {
         if (this.state.data === null) {
@@ -44,10 +38,17 @@ export class GetResults extends React.Component {
                 <h1 className={"header"}>K Wait a sec..</h1>
             )
         } else {
-            console.log(JSON.stringify(this.state.data))
-            return (
-                <h1 className={"header"}>{JSON.stringify(this.state.data)}</h1>
-            )
+            return <div>
+                {Object.keys(this.state.data).map(key => {
+                    return <button className={"result-item"} key={key}>
+                        <div className={"result-item-text"}>
+                            {this.state.data[key].material_name}
+                        </div>
+                        {/*{key}*/}
+                        {/*{key} : {this.state.data[key].messy}*/}
+                    </button>
+                })}
+            </div>
         }
     }
 
