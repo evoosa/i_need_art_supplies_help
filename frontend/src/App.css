@@ -291,15 +291,23 @@ body {
 /* Popup style */
 .popup-box {
     position: fixed;
-    background: #00000050;
+    background: #00000090;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
 }
 
-.popup-contents {
+.popup-header {
     color: #c769b5;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.popup-contents {
+    /*color: #c769b5;*/
+    color: #e66caf;
     font-size: 15px;
     text-align: left;
 
@@ -309,7 +317,7 @@ body {
     height: auto;
     max-height: 70vh;
     margin-top: calc(100vh - 85vh - 20px);
-    padding: 20px;
+    padding: 5% 5% 5% 5%;
     overflow: auto;
     font-weight: normal;
     border: 3px solid #c769b5;
@@ -318,11 +326,12 @@ body {
     display: flex;
     background: linear-gradient(#d1f8ff, #f6aee2);
     box-shadow: 8px 8px #de79b1;
-    align-items: center;
-    justify-content: center;
+
+    flex-direction: column;
+    flex-wrap: inherit;
     align-content: flex-end;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .close-icon {
