@@ -37,11 +37,12 @@ function PopupButton(props) {
                 <p>
                     {art_supply.description}
                 </p>
+                <br></br>
                 <img className={"popup-image-box"}
                      src={"https://i-need-art-supplies-help-me.pasten.life/images/" + art_supply.img_filename}
                 />
                 <br></br>
-                <h2 className={"popup-header"}>prices</h2>
+                <h2 className={"popup-header"}>Prices</h2>
                 <p>
                     starts from {art_supply.min_price_ils} ILS per {art_supply.price_per}
                     {(art_supply.available_in_set === '0' ? ', it\'s available in sets' : '')}
