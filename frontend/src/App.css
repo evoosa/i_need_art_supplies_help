@@ -1,7 +1,6 @@
 
 body {
-    background: url("https://art-supplies.s3.eu-central-1.amazonaws.com/penscribble.jpg");
-    /*background: url("http://superdevresources.com/wp-content/uploads/2014/02/pattern-background.png");*/
+    background: url("https://i-need-art-supplies-help-me.pasten.life/images/penscribble.jpg");
     font-family: system-ui;
 }
 
@@ -306,8 +305,7 @@ body {
 }
 
 .popup-contents {
-    /*color: #c769b5;*/
-    color: #e66caf;
+    color: #c769b5;
     font-size: 15px;
     text-align: left;
 
@@ -325,13 +323,23 @@ body {
     cursor: pointer;
     display: flex;
     background: linear-gradient(#d1f8ff, #f6aee2);
-    box-shadow: 8px 8px #de79b1;
+    box-shadow: 8px 8px #c769b5;
 
     flex-direction: column;
     flex-wrap: inherit;
     align-content: flex-end;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.popup-image-box {
+    align-self: center;
+    border: 3px solid #c769b5;
+    height: 95%;
+    width: 95%;
+    max-height: 500px;
+    max-width: 500px;
+    padding: 2px;
 }
 
 .close-icon {
