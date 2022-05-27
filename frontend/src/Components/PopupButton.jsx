@@ -14,18 +14,21 @@ const Popup = props => {
 function PopupButton(props) {
     const {art_supply} = props
     const [isOpen, setIsOpen] = useState(false);
-    console.log(art_supply)
     const togglePopup = () => {
         setIsOpen(!isOpen);
     }
 
     return <div>
+        <img
+            className={"art-types-button-image-box"}
+            src={"https://i-need-art-supplies-help-me.pasten.life/images/" + art_supply.img_filename}/>
         <input
             type="button"
             className={"result-item-box"}
             value={art_supply.material_name}
             onClick={togglePopup}
         />
+        <br></br>
         {isOpen && <Popup
             content={<>
                 <h2 style={{

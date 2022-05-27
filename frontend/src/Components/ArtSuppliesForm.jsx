@@ -52,6 +52,12 @@ export class ArtSuppliesForm extends Component {
     // Handle fields change
     handleChoice = (e) => {
         this.state[e.target.name] = e.target.value
+        if (e.target.name === 'safeBet') {
+            if (e.target.value === '0') {
+                console.log('really? a safe bet? :(')
+                this.state.step = 7
+            }
+        }
     };
 
     handleArtTypeToggleChange = (key, val) => {
@@ -61,36 +67,32 @@ export class ArtSuppliesForm extends Component {
     render() {
         const {step} = this.state;
         switch (step) {
-            // case 1:
-            //     return (
-            //         <WelcomePage
-            //             continues={this.continues}
-            //         />
-            //     );
-            // case 2:
-            //     return (
-            //         <PreferredArtTypes
-            //             handleChoice={this.handleArtTypeToggleChange}
-            //             back={this.back}
-            //             continues={this.continues}
-            //             state={this.state}
-            //         />
-            //     );
             case 1:
                 return (
-                    <Approve
+                    <WelcomePage
+                        continues={this.continues}
+                    />
+                );
+            case 2:
+                return (
+                    <SafeBetChoice
+                        handleChoice={this.handleChoice}
+                        back={this.back}
+                        continues={this.continues}
+                        state={this.state}
+                        sx_override={this.radio_button_sx_override}
+                    />
+                );
+            case 3:
+                return (
+                    <PreferredArtTypes
+                        handleChoice={this.handleArtTypeToggleChange}
                         back={this.back}
                         continues={this.continues}
                         state={this.state}
                     />
                 );
-            case 2:
-                return (
-                    <GetResults
-                        state={this.state}
-                    />
-                );
-            case 3:
+            case 4:
                 return (
                     <CompactChoice
                         handleChoice={this.handleChoice}
@@ -100,7 +102,7 @@ export class ArtSuppliesForm extends Component {
                         sx_override={this.radio_button_sx_override}
                     />
                 );
-            case 4:
+            case 5:
                 return (
                     <LikesExperimentingChoice
                         handleChoice={this.handleChoice}
@@ -110,7 +112,7 @@ export class ArtSuppliesForm extends Component {
                         sx_override={this.radio_button_sx_override}
                     />
                 );
-            case 5:
+            case 6:
                 return (
                     <MessyChoice
                         handleChoice={this.handleChoice}
@@ -120,19 +122,9 @@ export class ArtSuppliesForm extends Component {
                         sx_override={this.radio_button_sx_override}
                     />
                 );
-            case 6:
-                return (
-                    <TogetherChoice
-                        handleChoice={this.handleChoice}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                        sx_override={this.radio_button_sx_override}
-                    />
-                );
             case 7:
                 return (
-                    <SafeBetChoice
+                    <TogetherChoice
                         handleChoice={this.handleChoice}
                         back={this.back}
                         continues={this.continues}

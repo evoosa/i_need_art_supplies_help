@@ -10,7 +10,7 @@ export class WelcomePage extends Component {
                 <h2 className={"sub-header main-sub-header-1"}>"Hey Eva, I'd love to consult you, </h2>
                 <h1 className={"main-header"}>Which art supplies should I get my GF for her birthday? 🥺</h1>
                 <h2 className={"sub-header main-sub-header-1"}>She expressed interest in art lately, and I'd like to surprise her. What should I buy her?"</h2>
-                <img className="phone-lady-img" src="https://i-need-art-supplies-help-me.pasten.life/phone-lady_compressed.webp"/>
+                <img className="phone-lady-img" src="https://i-need-art-supplies-help-me.pasten.life/images/phone-lady_compressed.webp"/>
                 <br/>
                 <br/>
                 <h3 className={"sub-header main-sub-header-2"}>Hmmm... 🤔</h3>
