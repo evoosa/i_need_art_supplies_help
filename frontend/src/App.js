@@ -1,6 +1,6 @@
 import './App.css';
 
-import ArtSuppliesForm from './Components/ArtSuppliesForm'
+import ArtSuppliesForm from './FormPages/ArtSuppliesForm'
 function App() {
   return (
     <>

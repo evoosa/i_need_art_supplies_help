@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Grid from '@mui/material/Grid';
-import ArtTypeToggleButton from "./ArtTypeToggleButton"
+import ArtTypeToggleButton from "./CustomComponents/ArtTypeToggleButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class PreferredArtTypes extends Component {

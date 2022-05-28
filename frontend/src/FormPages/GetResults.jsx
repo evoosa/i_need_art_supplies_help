@@ -1,5 +1,5 @@
 import React from 'react';
-import PopupButton from "./PopupButton";
+import PopupButton from "./CustomComponents/PopupButton";
 
 export class GetResults extends React.Component {
 
@@ -21,7 +21,6 @@ export class GetResults extends React.Component {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(state)
         };
-        // fetch('http://localhost:6969/get_recommended_art_supplies', requestOptions)
         fetch('http://3.70.74.186:6969/get_recommended_art_supplies', requestOptions)
             .then((response) => response.json())
             .then((responseJson) => {

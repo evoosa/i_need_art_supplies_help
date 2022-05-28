@@ -55,7 +55,7 @@ export class ArtSuppliesForm extends Component {
         if (e.target.name === 'safeBet') {
             if (e.target.value === '0') {
                 console.log('really? a safe bet? :(')
-                this.state.step = 7
+                this.state.step = 8
             }
         }
     };

@@ -63,10 +63,10 @@ function PopupButton(props) {
                 </p>
                 <h2 className={"popup-header"}>Good To Know</h2>
                 <p>
-                    {(art_supply.compact === '0' ? 'it\'s compact and can be carried around' : '')}
-                    {(art_supply.messy === '0' ? 'beware that it\'s a bit of messy' : '')}
-                    {(art_supply.safe_bet === '0' ? 'it\'s a safe bet so you can\'t fuckup with this one' : '')}
-                    {(art_supply.together === '0' ? 'it can be enjoyed together which is nice' : '')}
+                    {(art_supply.compact === '0' ? 'it\'s compact and can be carried around. ' : '')}
+                    {(art_supply.messy === '0' ? 'beware that it\'s a bit of messy. ' : '')}
+                    {(art_supply.safe_bet === '0' ? 'it\'s a safe bet so you can\'t fuckup with this one. ' : '')}
+                    {(art_supply.together === '0' ? 'it can be enjoyed together which is nice. ' : '')}
                 </p>
             </>}
             handleClose={togglePopup}
