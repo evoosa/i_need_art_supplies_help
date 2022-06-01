@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import pprint
 
 from models.recommendation import recommendation
@@ -45,15 +45,17 @@ def parse_response(response):
 
 
 @app.route('/get_recommended_art_supplies', methods=['GET', 'POST'])
+@cross_origin()
 def get_recommended_art_supplies():
     if request.method == 'POST':
         response_data = request.get_json()
         parsed_response = parse_response(response_data)
-        # response.headers.add('Access-Control-Allow-Origin', '*')
         rec = recommendation(parsed_response)
         rec.get_recommended_groups()
         return {key: val.attributes for (key, val) in rec.recommended_art_supplies.items()}
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', 6969)
+    app.run('0.0.0.0', 80,
+            ssl_context=('/etc/letsencrypt/live/i-need-art-supplies-help.pasten.life/fullchain.pem',
+                         '/etc/letsencrypt/live/i-need-art-supplies-help.pasten.life/privkey.pem'))

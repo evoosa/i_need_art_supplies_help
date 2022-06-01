@@ -19,9 +19,10 @@ export class GetResults extends React.Component {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(state)
+            body: JSON.stringify(state),
+            // referrerPolicy: "unsafe-url"
         };
-        fetch('http://3.70.74.186:6969/get_recommended_art_supplies', requestOptions)
+        fetch('https://i-need-art-supplies-help.pasten.life:80/get_recommended_art_supplies', requestOptions)
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({data: responseJson})
