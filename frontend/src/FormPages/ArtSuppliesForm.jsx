@@ -33,14 +33,13 @@ export class ArtSuppliesForm extends Component {
     playMusic = () => {
         if (this.state.firstClick === false) {
             var audio = document.getElementById('horrible-music');
-            audio.play();
             var play_audio_button = document.getElementById("play-audio-button");
+            audio.play();
             play_audio_button.innerHTML = "Pause";
+            audio.className = "is-playing";
             this.setState({
                 firstClick: true
             })
-        } else {
-            console.log('not playing')
         }
     }
 
