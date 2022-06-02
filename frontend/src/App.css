@@ -26,6 +26,24 @@ body {
     align-items: center;
 }
 
+/*.horrible-music {*/
+/*    !*width: 40px;*!*/
+/*}*/
+
+/*.horrible-music::-webkit-media-controls-panel {*/
+/*    background-color: #c769b5;*/
+
+/*}*/
+
+/*.horrible-music::-webkit-media-controls-volume-slider {*/
+/*    background-color: #B1D4E0;*/
+/*    visibility: hidden;*/
+
+/*    !*border-radius: 25px;*!*/
+/*    !*padding-left: 8px;*!*/
+/*    !*padding-right: 8px;*!*/
+/*}*/
+
 .footer-icon {
     padding: 3px;
 }

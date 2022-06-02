@@ -20,13 +20,28 @@ export class ArtSuppliesForm extends Component {
         likesExperimenting: '0',
         messy: '0',
         together: '2',
-        safeBet: '1'
+        safeBet: '1',
+        firstClick: false
     };
 
     radio_button_sx_override = {
         '& .MuiFormControlLabel-label': {
             fontFamily: 'system-ui',
         },
+    }
+
+    playMusic = () => {
+        if (this.state.firstClick === false) {
+            var audio = document.getElementById('horrible-music');
+            audio.play();
+            var play_audio_button = document.getElementById("play-audio-button");
+            play_audio_button.innerHTML = "Pause";
+            this.setState({
+                firstClick: true
+            })
+        } else {
+            console.log('not playing')
+        }
     }
 
     // Proceed to next step
@@ -36,7 +51,7 @@ export class ArtSuppliesForm extends Component {
         this.setState({
             step: step + 1,
         });
-        console.log(this.state)
+        this.playMusic();
     };
 
     // Go back to prev step
@@ -68,84 +83,66 @@ export class ArtSuppliesForm extends Component {
         const {step} = this.state;
         switch (step) {
             case 1:
-                return (
-                    <WelcomePage
-                        continues={this.continues}
-                    />
-                );
+                return (<WelcomePage
+                    continues={this.continues}
+                />);
             case 2:
-                return (
-                    <SafeBetChoice
-                        handleChoice={this.handleChoice}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                        sx_override={this.radio_button_sx_override}
-                    />
-                );
+                return (<SafeBetChoice
+                    handleChoice={this.handleChoice}
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                    sx_override={this.radio_button_sx_override}
+                />);
             case 3:
-                return (
-                    <PreferredArtTypes
-                        handleChoice={this.handleArtTypeToggleChange}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                    />
-                );
+                return (<PreferredArtTypes
+                    handleChoice={this.handleArtTypeToggleChange}
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                />);
             case 4:
-                return (
-                    <CompactChoice
-                        handleChoice={this.handleChoice}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                        sx_override={this.radio_button_sx_override}
-                    />
-                );
+                return (<CompactChoice
+                    handleChoice={this.handleChoice}
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                    sx_override={this.radio_button_sx_override}
+                />);
             case 5:
-                return (
-                    <LikesExperimentingChoice
-                        handleChoice={this.handleChoice}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                        sx_override={this.radio_button_sx_override}
-                    />
-                );
+                return (<LikesExperimentingChoice
+                    handleChoice={this.handleChoice}
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                    sx_override={this.radio_button_sx_override}
+                />);
             case 6:
-                return (
-                    <MessyChoice
-                        handleChoice={this.handleChoice}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                        sx_override={this.radio_button_sx_override}
-                    />
-                );
+                return (<MessyChoice
+                    handleChoice={this.handleChoice}
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                    sx_override={this.radio_button_sx_override}
+                />);
             case 7:
-                return (
-                    <TogetherChoice
-                        handleChoice={this.handleChoice}
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                        sx_override={this.radio_button_sx_override}
-                    />
-                );
+                return (<TogetherChoice
+                    handleChoice={this.handleChoice}
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                    sx_override={this.radio_button_sx_override}
+                />);
             case 8:
-                return (
-                    <Approve
-                        back={this.back}
-                        continues={this.continues}
-                        state={this.state}
-                    />
-                );
+                return (<Approve
+                    back={this.back}
+                    continues={this.continues}
+                    state={this.state}
+                />);
             case 9:
-                return (
-                    <GetResults
-                        state={this.state}
-                    />
-                );
+                return (<GetResults
+                    state={this.state}
+                />);
         }
     }
 }
