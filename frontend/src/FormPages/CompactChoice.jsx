@@ -18,7 +18,6 @@ export class CompactChoice extends Component {
                     sx={sx_override}
                     className="choice-radio-group"
                     defaultValue={state["compact"]}
-                    // defaultValue="0"
                     name="compact"
                     onChange={handleChoice}
                 >
