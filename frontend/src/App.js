@@ -1,5 +1,5 @@
 import './App.css';
-import Footer from "./FormPages/Footer";
+import Footer from "./FormPages/CustomComponents/Footer";
 import ArtSuppliesForm from './FormPages/ArtSuppliesForm'
 
 function App() {

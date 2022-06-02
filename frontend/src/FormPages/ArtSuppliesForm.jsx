@@ -36,7 +36,7 @@ export class ArtSuppliesForm extends Component {
             var play_audio_button = document.getElementById("play-audio-button");
             audio.play();
             play_audio_button.innerHTML = "Pause";
-            audio.className = "is-playing";
+            audio.className = "playing";
             this.setState({
                 firstClick: true
             })
