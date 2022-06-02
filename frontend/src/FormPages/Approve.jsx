@@ -3,7 +3,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class Approve extends Component {
     render() {
-        const {back, continues, state} = this.props
+        const {back, continues} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>ARE YOU READY FOR THE RESULTS ? 🤯</h1>

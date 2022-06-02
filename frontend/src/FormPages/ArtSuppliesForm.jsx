@@ -30,27 +30,31 @@ export class ArtSuppliesForm extends Component {
         },
     }
 
-    playMusic = () => {
-        if (this.state.firstClick === false) {
-            var audio = document.getElementById('horrible-music');
-            var play_audio_button = document.getElementById("play-audio-button");
-            audio.play();
-            play_audio_button.innerHTML = "Pause";
-            audio.className = "playing";
-            this.setState({
-                firstClick: true
-            })
-        }
+    playMusicOnFirstClick = () => {
+        var audio = document.getElementById('horrible-music');
+        var play_audio_button = document.getElementById("play-audio-button");
+        audio.play();
+        play_audio_button.innerHTML = "Pause";
+        audio.className = "playing";
     }
 
     // Proceed to next step
     continues = (e) => {
         e.preventDefault();
-        const {step} = this.state;
+        let {step} = this.state;
+        if (this.state['safeBet'] === '0') {
+            console.log('really? a safe bet? :(')
+            this.state.step = 8
+        }
+
         this.setState({
             step: step + 1,
         });
-        this.playMusic();
+        if (this.state.firstClick === false) {
+            this.playMusicOnFirstClick();
+            this.setState({firstClick: true})
+        }
+        console.log(this.state);
     };
 
     // Go back to prev step
@@ -66,12 +70,6 @@ export class ArtSuppliesForm extends Component {
     // Handle fields change
     handleChoice = (e) => {
         this.state[e.target.name] = e.target.value
-        if (e.target.name === 'safeBet') {
-            if (e.target.value === '0') {
-                console.log('really? a safe bet? :(')
-                this.state.step = 8
-            }
-        }
     };
 
     handleArtTypeToggleChange = (key, val) => {
@@ -136,7 +134,6 @@ export class ArtSuppliesForm extends Component {
                 return (<Approve
                     back={this.back}
                     continues={this.continues}
-                    state={this.state}
                 />);
             case 9:
                 return (<GetResults
