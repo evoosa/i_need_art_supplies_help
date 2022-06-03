@@ -1,9 +1,10 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import {playMusic} from "./CustomComponents/MusicPlayer"
 
 export class WelcomePage extends Component {
     render() {
-        const {continues, playMusic} = this.props
+        const {continues} = this.props
         return (
             <React.Fragment>
                 <br/>

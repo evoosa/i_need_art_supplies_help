@@ -4,10 +4,10 @@ import SafeBetChoice from "./SafeBetChoice";
 import WelcomePage from "./WelcomePage";
 import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
-import MessyChoice from "./MessyChoice.jsx"
-import TogetherChoice from "./TogetherChoice.jsx"
-import Approve from "./Approve.jsx"
-import GetResults from "./GetResults.jsx";
+import MessyChoice from "./MessyChoice"
+import TogetherChoice from "./TogetherChoice"
+import Approve from "./Approve"
+import GetResults from "./GetResults";
 
 export class ArtSuppliesForm extends Component {
     state = {
@@ -29,15 +29,6 @@ export class ArtSuppliesForm extends Component {
             fontFamily: 'system-ui',
         },
     }
-
-    playMusic = () => {
-        var audio = document.getElementById('horrible-music');
-        var play_audio_button = document.getElementById("play-audio-button");
-        audio.play();
-        play_audio_button.innerHTML = "Pause";
-        audio.className = "playing";
-    }
-
     // Proceed to next step
     continues = (e) => {
         e.preventDefault();
@@ -65,7 +56,6 @@ export class ArtSuppliesForm extends Component {
             case 1:
                 return (<WelcomePage
                     continues={this.continues}
-                    playMusic={this.playMusic}
                 />);
             case 2:
                 return (<SafeBetChoice
