@@ -42,14 +42,8 @@ export class ArtSuppliesForm extends Component {
     continues = (e) => {
         e.preventDefault();
         let {step} = this.state;
-        if (this.state['safeBet'] === '0') {
-            console.log('really? a safe bet? :(')
-            this.state.step = 8
-        }
+        this.setState({step: step + 1})
 
-        this.setState({
-            step: step + 1,
-        });
         if (this.state.firstClick === false) {
             this.playMusicOnFirstClick();
             this.setState({firstClick: true})
@@ -63,7 +57,6 @@ export class ArtSuppliesForm extends Component {
         this.setState({
             step: step - 1,
         });
-        console.log(this.state)
     };
 
     // Handle fields change
@@ -84,6 +77,7 @@ export class ArtSuppliesForm extends Component {
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
+                    setState={this.setState.bind(this)}
                     sx_override={this.radio_button_sx_override}
                 />);
             case 3:

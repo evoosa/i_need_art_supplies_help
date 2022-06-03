@@ -5,14 +5,14 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-
 export class SafeBetChoice extends Component {
     render() {
-        const {handleChoice, back, continues, state, sx_override} = this.props
+        const {handleChoice, back, continues, state, setState, sx_override} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>first of all - are you afraid of your partner and prefer a safe bet?</h1>
-                <h2 className={"sub-header"}>I don't recommend a safe bet since it narrows your options, but I get you 🤷</h2>
+                <h2 className={"sub-header"}>I don't recommend a safe bet since it narrows your options, but I get you
+                    🤷</h2>
                 <br/>
                 <RadioGroup
                     sx={sx_override}
@@ -41,7 +41,18 @@ export class SafeBetChoice extends Component {
                     className="next-menu"
                 />
                 <ArrowForwardIcon
-                    onClick={continues}
+                    onClick={(e) => {
+                        if (state.safeBet === '0') {
+                            setState(
+                                {step: 8},
+                                () => {
+                                    continues();
+                                }
+                            )
+                        } else {
+                            continues(e);
+                        }
+                    }}
                     fontSize='large'
                     className='next-menu'
                 />
