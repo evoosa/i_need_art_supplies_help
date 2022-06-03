@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, useEffect} from "react";
 import PreferredArtTypes from "./PreferredArtTypes";
 import SafeBetChoice from "./SafeBetChoice";
 import WelcomePage from "./WelcomePage";
@@ -47,7 +47,9 @@ export class ArtSuppliesForm extends Component {
 
     // Handle fields change
     handleChoice = (e) => {
-        this.state[e.target.name] = e.target.value
+        var newState = {}
+        newState[e.target.name] = e.target.value
+        this.setState(newState);
     };
 
     render() {

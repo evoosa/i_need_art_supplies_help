@@ -17,7 +17,7 @@ export class MessyChoice extends Component {
                 <RadioGroup
                     sx={sx_override}
                     className="choice-radio-group"
-                    defaultValue={state["messy"]}
+                    value={state["messy"]}
                     name="messy"
                     onChange={handleChoice}
                 >

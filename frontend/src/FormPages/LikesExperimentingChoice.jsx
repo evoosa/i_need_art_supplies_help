@@ -16,7 +16,7 @@ export class LikesExperimentingChoice extends Component {
                 <RadioGroup
                     sx={sx_override}
                     className="choice-radio-group"
-                    defaultValue={state["likesExperimenting"]}
+                    value={state["likesExperimenting"]}
                     name="likesExperimenting"
                     onChange={handleChoice}
                 >

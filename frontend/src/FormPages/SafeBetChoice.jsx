@@ -17,7 +17,7 @@ export class SafeBetChoice extends Component {
                 <RadioGroup
                     sx={sx_override}
                     className="choice-radio-group"
-                    defaultValue={state["safeBet"]}
+                    value={state["safeBet"]}
                     name="safeBet"
                     onChange={handleChoice}
                 >
@@ -46,7 +46,7 @@ export class SafeBetChoice extends Component {
                             setState(
                                 {step: 8},
                                 () => {
-                                    continues();
+                                    continues(e);
                                 }
                             )
                         } else {

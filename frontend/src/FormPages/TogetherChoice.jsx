@@ -17,7 +17,7 @@ export class TogetherChoice extends Component {
                 <RadioGroup
                     sx={sx_override}
                     className="choice-radio-group"
-                    defaultValue={state["together"]}
+                    value={state["together"]}
                     name="together"
                     onChange={handleChoice}
                 >
