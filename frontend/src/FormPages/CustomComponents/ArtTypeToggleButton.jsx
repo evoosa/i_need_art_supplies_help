@@ -1,14 +1,16 @@
 import React, {useState} from "react";
 
 export default function ArtTypeToggleButton(props) {
-    const {stateKey, handleChoice, imgUrl, state} = props
+    const {stateKey, imgUrl, state, setState} = props
     const [value, setValue] = useState(!state[stateKey]);
     const currentValue = state[stateKey]
     const buttonId = "react-switch-new-" + stateKey
 
     function onChange() {
         setValue(!value)
-        handleChoice(stateKey, value)
+        var stateObj = {};
+        stateObj[stateKey] = value;
+        setState(stateObj);
     }
 
     return (

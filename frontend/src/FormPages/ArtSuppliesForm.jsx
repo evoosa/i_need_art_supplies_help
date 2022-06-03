@@ -54,7 +54,6 @@ export class ArtSuppliesForm extends Component {
             this.playMusicOnFirstClick();
             this.setState({firstClick: true})
         }
-        console.log(this.state);
     };
 
     // Go back to prev step
@@ -71,10 +70,6 @@ export class ArtSuppliesForm extends Component {
     handleChoice = (e) => {
         this.state[e.target.name] = e.target.value
     };
-
-    handleArtTypeToggleChange = (key, val) => {
-        this.state[key] = val
-    }
 
     render() {
         const {step} = this.state;
@@ -93,10 +88,10 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 3:
                 return (<PreferredArtTypes
-                    handleChoice={this.handleArtTypeToggleChange}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
+                    setState={this.setState.bind(this)}
                 />);
             case 4:
                 return (<CompactChoice

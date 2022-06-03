@@ -6,7 +6,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class PreferredArtTypes extends Component {
     render() {
-        const {handleChoice, back, continues, state} = this.props
+        const {back, continues, state, setState} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>which types of art do you think your partner would like? </h1>
@@ -20,18 +20,18 @@ export class PreferredArtTypes extends Component {
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="painting"
-                            handleChoice={handleChoice}
                             imgUrl="https://art-supplies-images.pasten.life/images/painting_compressed.webp"
                             state={state}
+                            setState={setState}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="sketching"
-                            handleChoice={handleChoice}
                             imgUrl="https://art-supplies-images.pasten.life/images/sketching_compressed.webp"
                             state={state}
+                            setState={setState}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
@@ -46,18 +46,18 @@ export class PreferredArtTypes extends Component {
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="writing"
-                            handleChoice={handleChoice}
                             imgUrl="https://art-supplies-images.pasten.life/images/writing_compressed.webp"
                             state={state}
+                            setState={setState}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="crafting"
-                            handleChoice={handleChoice}
                             imgUrl="https://art-supplies-images.pasten.life/images/crafting_compressed.webp"
                             state={state}
+                            setState={setState}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
