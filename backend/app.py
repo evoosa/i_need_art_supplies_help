@@ -1,6 +1,5 @@
 from flask import Flask, redirect, url_for, request, jsonify
 from flask_cors import CORS, cross_origin
-import pprint
 
 from models.recommendation import recommendation
 
@@ -33,7 +32,7 @@ test_response = {'compact': '2',
 
 def parse_response(response):
     print(response)
-    test_answer = {
+    parsed_response = {
         'compact': response['compact'],
         'preferred_art_types': [art_type for art_type in ART_TYPES if response[art_type] == True],
         'likes_experimenting': response['likesExperimenting'],
@@ -41,7 +40,7 @@ def parse_response(response):
         'together': response['together'],
         'safe_bet': response['safeBet']
     }
-    return test_answer
+    return parsed_response
 
 
 @app.route('/get_recommended_art_supplies', methods=['GET', 'POST'])

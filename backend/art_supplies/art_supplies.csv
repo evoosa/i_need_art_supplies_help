@@ -14,7 +14,7 @@ Color palette,color_palette,1,1,1,0,1,0,1,1,5,0,0,palette,a palette for colors. 
 Eraser,eraser,0,1,0,1,1,1,1,1,4,1,0,eraser,IT ERASES PENCILS LOL,"Max Stock, Art stores, Kravitz",0,eraser_compressed.webp
 Sharpener,sharpener,0,1,0,1,1,1,1,1,5,1,0,sharpener,IT SHARPENS PENCILS LOL,"Max Stock, Art stores, Kravitz",0,sharpener_compressed.webp
 Brush Case,brush_case,0,1,1,0,1,0,1,1,70,1,0,case,"a case to store brushes, comfortable for carrying",Art Stores,0,brush_case_compressed.webp
-Pencil Case,pencil_case,0,1,0,1,0,1,1,1,70,1,0,case,"a case to store pencils, comfortable for carrying","Max Stock, Art Stores, Kravitz",0,pencil_case_compressed.webp
+Pencil Case,pencil_case,0,1,0,1,0,1,1,1,20,1,0,case,"a case to store pencils, comfortable for carrying","Max Stock, Art Stores, Kravitz",0,pencil_case_compressed.webp
 Embroidery Kit,embroidery_kit,1,0,1,1,1,1,1,1,20,0,1,kit,"embroidery is the craft of decorating fabric using a needle to apply thread or yarn. a premade kit will contain a needle, a hoop and yarn",Art Stores,1,embroidery_kit_compressed.webp
 POSCA Markers,posca_markers,0,1,0,1,0,1,1,1,80,0,0,set,"opaque, high-quality, permanent markers, ""POSCA"" is just the brand. great for sketching, professional painting and for street-art since they stay on all surfaces. i personally use them for body painting and street-art",Art Stores,0,posca_markers_compressed.webp
 Graphite Pencils,graphite_pencils,0,1,0,1,1,1,1,1,50,0,0,set,"regular graphite pencils, great for aspiring artists who wish to learn how to sketch","Max Stock, Art stores, Kravitz",0,graphite_pencils_compressed.webp
