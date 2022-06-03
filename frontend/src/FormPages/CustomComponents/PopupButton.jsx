@@ -21,7 +21,9 @@ function PopupButton(props) {
     return <div>
         <img
             className={"art-types-button-image-box"}
-            src={"https://art-supplies-images.pasten.life/images/" + art_supply.img_filename}/>
+            src={"https://art-supplies-images.pasten.life/images/" + art_supply.img_filename}
+            alt={"art-supply-" + art_supply.img_filename}
+        />
         <input
             type="button"
             className={"result-item-box"}
@@ -43,6 +45,7 @@ function PopupButton(props) {
                 <br/>
                 <img className={"popup-image-box"}
                      src={"https://art-supplies-images.pasten.life/images/" + art_supply.img_filename}
+                     alt={"art-supply-" + art_supply.img_filename}
                 />
 
                 <br/>

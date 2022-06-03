@@ -19,6 +19,7 @@ export default function ArtTypeToggleButton(props) {
                 <div className="box">
                     <img className={"art-types-button-image-box"}
                          src={imgUrl}
+                         alt={"art-types-img-" + stateKey}
                     />
                     <h2 className={"art-types-button-image-text"}>{stateKey}</h2>
                     <input

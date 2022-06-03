@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from "react";
+import React, {Component} from "react";
 import PreferredArtTypes from "./PreferredArtTypes";
 import SafeBetChoice from "./SafeBetChoice";
 import WelcomePage from "./WelcomePage";
@@ -116,6 +116,10 @@ export class ArtSuppliesForm extends Component {
                 return (<GetResults
                     state={this.state}
                 />);
+            default:
+                return (
+                    <div>hmm dis is not supposed to happen</div>
+                );
         }
     }
 }

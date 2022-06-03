@@ -13,7 +13,9 @@ export class WelcomePage extends Component {
                 <h2 className={"sub-header main-sub-header-1"}>She expressed interest in art lately, and I'd like to
                     surprise her. What should I buy her?"</h2>
                 <img className="loading-img phone-lady-img"
-                     src="https://art-supplies-images.pasten.life/images/phone-lady_compressed.webp"/>
+                     src="https://art-supplies-images.pasten.life/images/phone-lady_compressed.webp"
+                     alt={"phone-lady"}
+                />
                 <br/>
                 <br/>
                 <h3 className={"sub-header main-sub-header-2"}>Hmmm... 🤔</h3>
