@@ -3,7 +3,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 export class WelcomePage extends Component {
     render() {
-        const {continues} = this.props
+        const {continues, playMusic} = this.props
         return (
             <React.Fragment>
                 <br/>
@@ -20,7 +20,10 @@ export class WelcomePage extends Component {
                 <br/>
                 <ArrowForwardIcon
                     id={'first-forward-icon'}
-                    onClick={continues}
+                    onClick={(e) => {
+                        playMusic();
+                        continues(e);
+                    }}
                     fontSize='large'
                     className='next-menu'
                 />

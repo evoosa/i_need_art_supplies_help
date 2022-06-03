@@ -30,7 +30,7 @@ export class ArtSuppliesForm extends Component {
         },
     }
 
-    playMusicOnFirstClick = () => {
+    playMusic = () => {
         var audio = document.getElementById('horrible-music');
         var play_audio_button = document.getElementById("play-audio-button");
         audio.play();
@@ -43,11 +43,6 @@ export class ArtSuppliesForm extends Component {
         e.preventDefault();
         let {step} = this.state;
         this.setState({step: step + 1})
-
-        if (this.state.firstClick === false) {
-            this.playMusicOnFirstClick();
-            this.setState({firstClick: true})
-        }
     };
 
     // Go back to prev step
@@ -70,6 +65,7 @@ export class ArtSuppliesForm extends Component {
             case 1:
                 return (<WelcomePage
                     continues={this.continues}
+                    playMusic={this.playMusic}
                 />);
             case 2:
                 return (<SafeBetChoice
