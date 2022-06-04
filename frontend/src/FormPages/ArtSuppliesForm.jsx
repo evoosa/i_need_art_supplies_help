@@ -9,6 +9,8 @@ import MessyChoice from "./MessyChoice"
 import TogetherChoice from "./TogetherChoiceTest"
 import Approve from "./Approve"
 import GetResults from "./GetResults";
+import {ChoicesData} from "./ChoicesData";
+
 
 export class ArtSuppliesForm extends Component {
     state = {
@@ -21,7 +23,6 @@ export class ArtSuppliesForm extends Component {
         likesExperimenting: '0',
         messy: '0',
         together: '2',
-        togetherTest: '2',
         safeBet: '1',
         firstClick: false
     };
@@ -63,6 +64,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 2:
                 return (<TogetherChoice
+                    choiceData={ChoicesData.together}
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
