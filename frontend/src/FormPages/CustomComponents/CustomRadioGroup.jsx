@@ -10,18 +10,19 @@ const radio_button_sx_override = {
 }
 
 export class CustomRadioGroup extends React.Component {
-    render() {
-        const {choicesData, handleChoice, state} = this.props
-        const LabelsList = React.memo(() => choicesData["choices"].map(function (choiceData, index) {
-            console.log(choiceData)
+    LabelsList = (props) => {
+        const choicesData = props.choicesData;
+        return choicesData["choices"].map(function (choiceData, index) {
             return <FormControlLabel
                 key={index}
                 value={choiceData['value']}
                 control={<Radio/>}
                 label={choiceData['label']}/>
+        })
+    }
 
-        }), [])
-
+    render() {
+        const {choicesData, handleChoice, state} = this.props
         return <React.Fragment>
             <h1 className={"header"}>{choicesData['mainHeader']}</h1>
             <h2 className={"sub-header"}>{choicesData['subHeader']}</h2>
@@ -33,7 +34,8 @@ export class CustomRadioGroup extends React.Component {
                 name={choicesData["name"]}
                 onChange={handleChoice}
             >
-                <LabelsList/>
+                <this.LabelsList
+                    choicesData={choicesData}/>
             </RadioGroup>
         </React.Fragment>
     }

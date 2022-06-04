@@ -25,7 +25,6 @@ export class GetResults extends React.Component {
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({data: responseJson})
-                console.log(this.state.data)
             })
             .catch((error) => {
                 console.error(error);
