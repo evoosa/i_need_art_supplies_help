@@ -5,7 +5,8 @@ import WelcomePage from "./WelcomePage";
 import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import MessyChoice from "./MessyChoice"
-import TogetherChoice from "./TogetherChoice"
+// import TogetherChoice from "./TogetherChoice"
+import TogetherChoice from "./TogetherChoiceTest"
 import Approve from "./Approve"
 import GetResults from "./GetResults";
 
@@ -20,6 +21,7 @@ export class ArtSuppliesForm extends Component {
         likesExperimenting: '0',
         messy: '0',
         together: '2',
+        togetherTest: '2',
         safeBet: '1',
         firstClick: false
     };
@@ -60,14 +62,20 @@ export class ArtSuppliesForm extends Component {
                     continues={this.continues}
                 />);
             case 2:
-                return (<SafeBetChoice
+                return (<TogetherChoice
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
-                    setState={this.setState.bind(this)}
-                    sx_override={this.radio_button_sx_override}
                 />);
+            // return (<SafeBetChoice
+            //     handleChoice={this.handleChoice}
+            //     back={this.back}
+            //     continues={this.continues}
+            //     state={this.state}
+            //     setState={this.setState.bind(this)}
+            //     sx_override={this.radio_button_sx_override}
+            // />);
             case 3:
                 return (<PreferredArtTypes
                     back={this.back}
