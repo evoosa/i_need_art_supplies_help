@@ -5,8 +5,7 @@ import WelcomePage from "./WelcomePage";
 import CompactChoice from "./CompactChoice"
 import LikesExperimentingChoice from "./LikesExperimentingChoice"
 import MessyChoice from "./MessyChoice"
-// import TogetherChoice from "./TogetherChoice"
-import TogetherChoice from "./TogetherChoiceTest"
+import TogetherChoice from "./TogetherChoice"
 import Approve from "./Approve"
 import GetResults from "./GetResults";
 import {ChoicesData} from "./ChoicesData";
@@ -63,21 +62,14 @@ export class ArtSuppliesForm extends Component {
                     continues={this.continues}
                 />);
             case 2:
-                return (<TogetherChoice
-                    choiceData={ChoicesData.together}
+                return (<SafeBetChoice
+                    choiceData={ChoicesData.safeBet}
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
+                    setState={this.setState.bind(this)}
                 />);
-            // return (<SafeBetChoice
-            //     handleChoice={this.handleChoice}
-            //     back={this.back}
-            //     continues={this.continues}
-            //     state={this.state}
-            //     setState={this.setState.bind(this)}
-            //     sx_override={this.radio_button_sx_override}
-            // />);
             case 3:
                 return (<PreferredArtTypes
                     back={this.back}
@@ -87,35 +79,35 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 4:
                 return (<CompactChoice
+                    choiceData={ChoicesData.compact}
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
-                    sx_override={this.radio_button_sx_override}
                 />);
             case 5:
                 return (<LikesExperimentingChoice
+                    choiceData={ChoicesData.likesExperimenting}
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
-                    sx_override={this.radio_button_sx_override}
                 />);
             case 6:
                 return (<MessyChoice
+                    choiceData={ChoicesData.messy}
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
-                    sx_override={this.radio_button_sx_override}
                 />);
             case 7:
                 return (<TogetherChoice
+                    choiceData={ChoicesData.together}
                     handleChoice={this.handleChoice}
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
-                    sx_override={this.radio_button_sx_override}
                 />);
             case 8:
                 return (<Approve

@@ -1,41 +1,19 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import CustomRadioGroup from "./CustomComponents/CustomRadioGroup";
 
 
 export class CompactChoice extends Component {
     render() {
-        const {handleChoice, back, continues, state, sx_override} = this.props
+        const {choiceData, handleChoice, back, continues, state} = this.props
         return (
             <React.Fragment>
-                <h1 className={"header"}>Does she plan to carry the supplies with her, or will she use them indoors?</h1>
-                <h2 className={"sub-header"}>if she'll carry them with her ,I'll recommend you compact art supplies. </h2>
-                <br/>
-                <RadioGroup
-                    sx={sx_override}
-                    className="choice-radio-group"
-                    value={state["compact"]}
-                    name="compact"
-                    onChange={handleChoice}
-                >
-                    <FormControlLabel
-                        value="2"
-                        control={<Radio/>}
-                        label="Both options are fine"/>
-                    <FormControlLabel
-                        value="0"
-                        control={<Radio/>}
-                        label="She'll carry the supplies with her"/>
-                    <FormControlLabel
-                        value="1"
-                        control={<Radio/>}
-                        label="She'll create only indoors"/>
-                </RadioGroup>
-                <br/>
-                <br/>
+                <CustomRadioGroup
+                    choicesData={choiceData}
+                    handleChoice={handleChoice}
+                    state={state}
+                />
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"

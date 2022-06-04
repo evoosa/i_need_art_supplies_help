@@ -1,43 +1,19 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import CustomRadioGroup from "./CustomComponents/CustomRadioGroup";
 
 
 export class LikesExperimentingChoice extends Component {
     render() {
-        const {handleChoice, back, continues, state, sx_override} = this.props
+        const {choiceData, handleChoice, back, continues, state} = this.props
         return (
             <React.Fragment>
-                <h1 className={"header"}>Does she like experimenting with new materials and techniques?</h1>
-                <br/>
-                <RadioGroup
-                    sx={sx_override}
-                    className="choice-radio-group"
-                    value={state["likesExperimenting"]}
-                    name="likesExperimenting"
-                    onChange={handleChoice}
-                >
-                    <FormControlLabel
-                        value="0"
-                        control={<Radio/>}
-                        sx={{
-                            color: "green"
-                        }}
-                        label="Yes 🥳"/>
-                    <FormControlLabel
-                        value="1"
-                        control={<Radio/>}
-                        label="No"/>
-                    <FormControlLabel
-                        value="2"
-                        control={<Radio/>}
-                        label="I Don't Know"/>
-                </RadioGroup>
-                <br/>
-                <br/>
+                <CustomRadioGroup
+                    choicesData={choiceData}
+                    handleChoice={handleChoice}
+                    state={state}
+                />
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"

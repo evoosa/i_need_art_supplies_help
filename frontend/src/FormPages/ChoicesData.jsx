@@ -51,7 +51,9 @@ export const ChoicesData = {
             {
                 "value": "0",
                 "label": "Yes 🥳",
-                "sx": {}
+                "sx": {
+                    color: "green"
+                }
             },
             {
                 "value": "1",
@@ -73,7 +75,9 @@ export const ChoicesData = {
             {
                 "value": "0",
                 "label": "She's OK with getting messy 💩",
-                "sx": {}
+                "sx": {
+                    color: "brown"
+                }
             },
             {
                 "value": "1",
@@ -90,7 +94,9 @@ export const ChoicesData = {
             {
                 "value": "1",
                 "label": "No 😁",
-                "sx": {}
+                "sx": {
+                    color: "green"
+                }
             },
             {
                 "value": "0",

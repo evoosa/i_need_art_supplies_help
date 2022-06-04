@@ -39,6 +39,8 @@ export class CustomRadioGroup extends React.Component {
                 <this.LabelsList
                     choicesData={choicesData}/>
             </RadioGroup>
+            <br/>
+            <br/>
         </React.Fragment>
     }
 
