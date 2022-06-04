@@ -17,7 +17,9 @@ export class CustomRadioGroup extends React.Component {
                 key={index}
                 value={choiceData['value']}
                 control={<Radio/>}
-                label={choiceData['label']}/>
+                label={choiceData['label']}
+                sx={choiceData['sx']}
+            />
         })
     }
 
