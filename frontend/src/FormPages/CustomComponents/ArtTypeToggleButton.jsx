@@ -1,17 +1,10 @@
 import React, {useState} from "react";
 
 export default function ArtTypeToggleButton(props) {
-    const {stateKey, imgUrl, state, setState} = props
+    const {stateKey, imgUrl, state, handleChoice} = props
     const [value, setValue] = useState(!state[stateKey]);
     const currentValue = state[stateKey]
     const buttonId = "react-switch-new-" + stateKey
-
-    function onChange() {
-        setValue(!value)
-        var stateObj = {};
-        stateObj[stateKey] = value;
-        setState(stateObj);
-    }
 
     return (
         <>
@@ -23,11 +16,13 @@ export default function ArtTypeToggleButton(props) {
                     />
                     <h2 className={"art-types-button-image-text"}>{stateKey}</h2>
                     <input
-                        checked={currentValue}
-                        onChange={onChange}
+                        id={buttonId}
                         type="checkbox"
                         className="react-switch-checkbox"
-                        id={buttonId}
+                        checked={currentValue}
+                        onChange={(e) => {
+                            handleChoice(stateKey, e.target.checked)
+                        }}
                     />
                     <label
                         style={{background: currentValue && '#c769b5'}}

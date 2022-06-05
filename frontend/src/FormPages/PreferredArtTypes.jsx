@@ -6,7 +6,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export class PreferredArtTypes extends Component {
     render() {
-        const {back, continues, state, setState} = this.props
+        const {back, continues, state, handleChoice} = this.props
         return (
             <React.Fragment>
                 <h1 className={"header"}>which types of art do you think your partner would like? </h1>
@@ -22,7 +22,7 @@ export class PreferredArtTypes extends Component {
                             stateKey="painting"
                             imgUrl="https://art-supplies-images.pasten.life/images/painting_compressed.webp"
                             state={state}
-                            setState={setState}
+                            handleChoice={handleChoice}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
@@ -31,7 +31,7 @@ export class PreferredArtTypes extends Component {
                             stateKey="sketching"
                             imgUrl="https://art-supplies-images.pasten.life/images/sketching_compressed.webp"
                             state={state}
-                            setState={setState}
+                            handleChoice={handleChoice}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
@@ -48,7 +48,7 @@ export class PreferredArtTypes extends Component {
                             stateKey="writing"
                             imgUrl="https://art-supplies-images.pasten.life/images/writing_compressed.webp"
                             state={state}
-                            setState={setState}
+                            handleChoice={handleChoice}
                         >
                         </ArtTypeToggleButton>
                     </Grid>
@@ -57,7 +57,7 @@ export class PreferredArtTypes extends Component {
                             stateKey="crafting"
                             imgUrl="https://art-supplies-images.pasten.life/images/crafting_compressed.webp"
                             state={state}
-                            setState={setState}
+                            handleChoice={handleChoice}
                         >
                         </ArtTypeToggleButton>
                     </Grid>

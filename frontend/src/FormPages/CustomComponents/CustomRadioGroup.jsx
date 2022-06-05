@@ -31,7 +31,7 @@ export class CustomRadioGroup extends React.Component {
                 className="choice-radio-group"
                 value={state[choicesData["name"]]}
                 name={choicesData["name"]}
-                onChange={handleChoice}
+                onChange={(e) => handleChoice(e.target.name, e.target.value)}
             >
                 <this.LabelsList
                     choicesData={choicesData}/>

@@ -27,6 +27,7 @@ export class ArtSuppliesForm extends Component {
         e.preventDefault();
         let {step} = this.state;
         this.setState({step: step + 1})
+        console.log(this.state);
     };
 
     // Go back to prev step
@@ -39,9 +40,9 @@ export class ArtSuppliesForm extends Component {
     };
 
     // Handle fields change
-    handleChoice = (e) => {
+    handleChoice = (name, value) => {
         var newState = {}
-        newState[e.target.name] = e.target.value
+        newState[name] = value
         this.setState(newState);
     };
 
@@ -76,7 +77,7 @@ export class ArtSuppliesForm extends Component {
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
-                    setState={this.setState.bind(this)}
+                    handleChoice={this.handleChoice}
                 />);
             case 4:
                 return (<RadioGroupFormPage
