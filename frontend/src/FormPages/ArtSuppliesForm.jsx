@@ -1,14 +1,9 @@
 import React, {Component} from "react";
-import PreferredArtTypes from "./PreferredArtTypes";
-import SafeBetChoice from "./SafeBetChoice";
 import WelcomePage from "./WelcomePage";
-import CompactChoice from "./CompactChoice"
-import LikesExperimentingChoice from "./LikesExperimentingChoice"
-import MessyChoice from "./MessyChoice"
-import TogetherChoice from "./TogetherChoice"
+import PreferredArtTypes from "./PreferredArtTypes";
 import Approve from "./Approve"
 import GetResults from "./GetResults";
-import FormPage from "./CustomComponents/FormPage";
+import RadioGroupFormPage from "./CustomComponents/RadioGroupFormPage";
 import {ChoicesData} from "./ChoicesData";
 
 
@@ -32,6 +27,7 @@ export class ArtSuppliesForm extends Component {
         e.preventDefault();
         let {step} = this.state;
         this.setState({step: step + 1})
+        console.log(this.state)
     };
 
     // Go back to prev step
@@ -58,7 +54,7 @@ export class ArtSuppliesForm extends Component {
                     continues={this.continues}
                 />);
             case 2:
-                return (<FormPage
+                return (<RadioGroupFormPage
                     choiceData={ChoicesData.safeBet}
                     handleChoice={this.handleChoice}
                     state={this.state}
@@ -76,15 +72,6 @@ export class ArtSuppliesForm extends Component {
                         }
                     }}
                 />);
-            // case 2:
-            //     return (<SafeBetChoice
-            //         choiceData={ChoicesData.safeBet}
-            //         handleChoice={this.handleChoice}
-            //         back={this.back}
-            //         continues={this.continues}
-            //         state={this.state}
-            //         setState={this.setState.bind(this)}
-            //     />);
             case 3:
                 return (<PreferredArtTypes
                     back={this.back}
@@ -93,36 +80,36 @@ export class ArtSuppliesForm extends Component {
                     setState={this.setState.bind(this)}
                 />);
             case 4:
-                return (<CompactChoice
+                return (<RadioGroupFormPage
                     choiceData={ChoicesData.compact}
                     handleChoice={this.handleChoice}
-                    back={this.back}
-                    continues={this.continues}
                     state={this.state}
+                    backCallback={this.back}
+                    continueCallback={this.continues}
                 />);
             case 5:
-                return (<LikesExperimentingChoice
+                return (<RadioGroupFormPage
                     choiceData={ChoicesData.likesExperimenting}
                     handleChoice={this.handleChoice}
-                    back={this.back}
-                    continues={this.continues}
                     state={this.state}
+                    backCallback={this.back}
+                    continueCallback={this.continues}
                 />);
             case 6:
-                return (<MessyChoice
+                return (<RadioGroupFormPage
                     choiceData={ChoicesData.messy}
                     handleChoice={this.handleChoice}
-                    back={this.back}
-                    continues={this.continues}
                     state={this.state}
+                    backCallback={this.back}
+                    continueCallback={this.continues}
                 />);
             case 7:
-                return (<TogetherChoice
+                return (<RadioGroupFormPage
                     choiceData={ChoicesData.together}
                     handleChoice={this.handleChoice}
-                    back={this.back}
-                    continues={this.continues}
                     state={this.state}
+                    backCallback={this.back}
+                    continueCallback={this.continues}
                 />);
             case 8:
                 return (<Approve

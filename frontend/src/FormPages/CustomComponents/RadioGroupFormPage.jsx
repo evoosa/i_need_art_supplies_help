@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import CustomRadioGroup from "./CustomComponents/CustomRadioGroup";
+import CustomRadioGroup from "./CustomRadioGroup";
 
 
-export class CompactChoice extends Component {
+export class RadioGroupFormPage extends Component {
     render() {
-        const {choiceData, handleChoice, back, continues, state} = this.props
+        const {choiceData, handleChoice, state, backCallback, continueCallback} = this.props
         return (
             <React.Fragment>
                 <CustomRadioGroup
@@ -15,19 +15,18 @@ export class CompactChoice extends Component {
                     state={state}
                 />
                 <ArrowBackIcon
-                    onClick={back}
+                    onClick={backCallback}
                     fontSize="large"
                     className="next-menu"
                 />
                 <ArrowForwardIcon
-                    onClick={continues}
+                    onClick={continueCallback}
                     fontSize='large'
                     className='next-menu'
                 />
-
             </React.Fragment>
         );
     }
 }
 
-export default CompactChoice;
+export default RadioGroupFormPage;
