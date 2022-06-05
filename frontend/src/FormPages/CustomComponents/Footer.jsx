@@ -7,12 +7,12 @@ export class Footer extends Component {
             <React.Fragment>
                 <div id="footer" className="footer">
                     <a className="footer-icon" href="https://www.instagram.com/evoosa.art/">
-                        <img src="https://evoosa-art.s3.eu-central-1.amazonaws.com/static/images/instagram.webp"
+                        <img src="https://art-supplies-images.pasten.life/images/instagram.webp"
                              width="30"
                              alt="instagram-logo"/>
                     </a>
                     <a className="footer-icon" href="https://visit.evoosa.art/">
-                        <img src="https://evoosa-art.s3.eu-central-1.amazonaws.com/static/images/o_transparent.webp"
+                        <img src="https://art-supplies-images.pasten.life/images/o_transparent.webp"
                              width="30"
                              alt="evoosa-o-logo"/>
                     </a>
