@@ -8,6 +8,7 @@ import MessyChoice from "./MessyChoice"
 import TogetherChoice from "./TogetherChoice"
 import Approve from "./Approve"
 import GetResults from "./GetResults";
+import FormPage from "./CustomComponents/FormPage";
 import {ChoicesData} from "./ChoicesData";
 
 
@@ -26,11 +27,6 @@ export class ArtSuppliesForm extends Component {
         firstClick: false
     };
 
-    radio_button_sx_override = {
-        '& .MuiFormControlLabel-label': {
-            fontFamily: 'system-ui',
-        },
-    }
     // Proceed to next step
     continues = (e) => {
         e.preventDefault();
@@ -62,14 +58,33 @@ export class ArtSuppliesForm extends Component {
                     continues={this.continues}
                 />);
             case 2:
-                return (<SafeBetChoice
+                return (<FormPage
                     choiceData={ChoicesData.safeBet}
                     handleChoice={this.handleChoice}
-                    back={this.back}
-                    continues={this.continues}
                     state={this.state}
-                    setState={this.setState.bind(this)}
+                    backCallback={this.back}
+                    continueCallback={(e) => {
+                        if (this.state.safeBet === '0') {
+                            this.setState(
+                                {step: 8},
+                                () => {
+                                    this.continues(e);
+                                }
+                            )
+                        } else {
+                            this.continues(e);
+                        }
+                    }}
                 />);
+            // case 2:
+            //     return (<SafeBetChoice
+            //         choiceData={ChoicesData.safeBet}
+            //         handleChoice={this.handleChoice}
+            //         back={this.back}
+            //         continues={this.continues}
+            //         state={this.state}
+            //         setState={this.setState.bind(this)}
+            //     />);
             case 3:
                 return (<PreferredArtTypes
                     back={this.back}
