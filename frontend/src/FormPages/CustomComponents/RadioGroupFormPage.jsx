@@ -6,11 +6,14 @@ import CustomRadioGroup from "./CustomRadioGroup";
 
 export class RadioGroupFormPage extends Component {
     render() {
-        const {choiceData, handleChoice, state, backCallback, continueCallback} = this.props
+        const {choicesData, handleChoice, state, backCallback, continueCallback} = this.props
         return (
             <React.Fragment>
+                <h1 className={"header"}>{choicesData['mainHeader']}</h1>
+                <h2 className={"sub-header"}>{choicesData['subHeader']}</h2>
+                <br/>
                 <CustomRadioGroup
-                    choicesData={choiceData}
+                    choicesData={choicesData}
                     handleChoice={handleChoice}
                     state={state}
                 />

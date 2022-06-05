@@ -27,7 +27,6 @@ export class ArtSuppliesForm extends Component {
         e.preventDefault();
         let {step} = this.state;
         this.setState({step: step + 1})
-        console.log(this.state)
     };
 
     // Go back to prev step
@@ -55,7 +54,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 2:
                 return (<RadioGroupFormPage
-                    choiceData={ChoicesData.safeBet}
+                    choicesData={ChoicesData.safeBet}
                     handleChoice={this.handleChoice}
                     state={this.state}
                     backCallback={this.back}
@@ -81,7 +80,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 4:
                 return (<RadioGroupFormPage
-                    choiceData={ChoicesData.compact}
+                    choicesData={ChoicesData.compact}
                     handleChoice={this.handleChoice}
                     state={this.state}
                     backCallback={this.back}
@@ -89,7 +88,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 5:
                 return (<RadioGroupFormPage
-                    choiceData={ChoicesData.likesExperimenting}
+                    choicesData={ChoicesData.likesExperimenting}
                     handleChoice={this.handleChoice}
                     state={this.state}
                     backCallback={this.back}
@@ -97,7 +96,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 6:
                 return (<RadioGroupFormPage
-                    choiceData={ChoicesData.messy}
+                    choicesData={ChoicesData.messy}
                     handleChoice={this.handleChoice}
                     state={this.state}
                     backCallback={this.back}
@@ -105,7 +104,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             case 7:
                 return (<RadioGroupFormPage
-                    choiceData={ChoicesData.together}
+                    choicesData={ChoicesData.together}
                     handleChoice={this.handleChoice}
                     state={this.state}
                     backCallback={this.back}
@@ -122,7 +121,7 @@ export class ArtSuppliesForm extends Component {
                 />);
             default:
                 return (
-                    <div>hmm dis is not supposed to happen</div>
+                    <div>hmmm dis is not supposed to happen</div>
                 );
         }
     }

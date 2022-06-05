@@ -26,9 +26,6 @@ export class CustomRadioGroup extends React.Component {
     render() {
         const {choicesData, handleChoice, state} = this.props
         return <React.Fragment>
-            <h1 className={"header"}>{choicesData['mainHeader']}</h1>
-            <h2 className={"sub-header"}>{choicesData['subHeader']}</h2>
-            <br/>
             <RadioGroup
                 sx={radio_button_sx_override}
                 className="choice-radio-group"
