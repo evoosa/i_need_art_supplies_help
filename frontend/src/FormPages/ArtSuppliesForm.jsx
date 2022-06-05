@@ -27,7 +27,6 @@ export class ArtSuppliesForm extends Component {
         e.preventDefault();
         let {step} = this.state;
         this.setState({step: step + 1})
-        console.log(this.state);
     };
 
     // Go back to prev step
