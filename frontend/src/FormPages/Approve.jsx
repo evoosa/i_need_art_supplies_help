@@ -9,7 +9,7 @@ export class Approve extends Component {
                 <h1 className={"header"}>ARE YOU READY FOR THE RESULTS ? 🤯</h1>
                 <br/>
                 <button
-                    className="yes-btn"
+                    className="get-results-button"
                     onClick={continues}
                 >Kind Off 🧐
                 </button>
@@ -19,7 +19,7 @@ export class Approve extends Component {
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"
-                    className="next-menu"
+                    className="arrow"
                 />
             </React.Fragment>
         );

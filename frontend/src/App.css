@@ -1,4 +1,4 @@
-
+/* Main Components */
 body {
     background: url("https://art-supplies-images.pasten.life/images/penscribble_compressed.webp");
     font-family: system-ui;
@@ -26,8 +26,25 @@ body {
     align-items: center;
 }
 
+.footer-icon {
+    padding: 3px;
+}
 
+.arrow {
+    margin: 20px;
+    cursor: pointer;
+    color: #4b9aa8;
+}
 
+.arrow:hover {
+    margin: 20px;
+    border-radius: 90%;
+    cursor: pointer;
+    color: white;
+    background-color: #4b9aa8;
+}
+
+/* Misc */
 .music-player-button {
     border: 2px solid white;
     color: white;
@@ -35,8 +52,16 @@ body {
     border-radius: 10px;
 }
 
-.footer-icon {
-    padding: 3px;
+.phone-lady-img {
+    width: 90%;
+    max-width: 700px;
+    margin: 3% auto 5%;
+    padding: 1%;
+    background: linear-gradient(white, #f6aee2);
+    color: #fff;
+    border: 3px solid #c769b5;
+    border-radius: 20px;
+    box-shadow: 8px 8px #de79b1;
 }
 
 .user-form {
@@ -52,32 +77,17 @@ body {
     box-shadow: 8px 8px #de79b1;
 }
 
-.phone-lady-img {
-    width: 90%;
-    max-width: 700px;
-    margin: 3% auto 5%;
-    padding: 1%;
-    background: linear-gradient(white, #f6aee2);
-    color: #fff;
-    border: 3px solid #c769b5;
-    border-radius: 20px;
-    box-shadow: 8px 8px #de79b1;
+.choice-radio-group {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    font-size: 150px;
+    color: #de79b1;
+    text-align: left;
+    text-transform: lowercase;
 }
 
-.next-menu {
-    margin: 20px;
-    cursor: pointer;
-    color: #4b9aa8;
-}
-
-.next-menu:hover {
-    margin: 20px;
-    border-radius: 90%;
-    cursor: pointer;
-    color: white;
-    background-color: #4b9aa8;
-}
-
+/* Headers */
 .header {
     /* ELEMENT */
     height: auto;
@@ -96,6 +106,25 @@ body {
     margin-bottom: 10px;
 }
 
+.welcome-page-header {
+    /* ELEMENT */
+    height: auto;
+    text-align: left;
+    margin: auto;
+    padding: 0px 20px 0px 10px;
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 5px;
+
+    /* TEXT */
+    color: #5cbbcc;
+    font-size: 25px;
+    max-font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Sub-Headers */
 .sub-header {
     /* ELEMENT */
     background-size: cover;
@@ -116,7 +145,7 @@ body {
     font-weight: bold;
 }
 
-.main-sub-header-1 {
+.friend-quote-sub-header {
     padding: 10px 0px 20px 10px;
     text-align: left;
     font-weight: bold;
@@ -124,7 +153,7 @@ body {
     text-transform: none;
 }
 
-.main-sub-header-2 {
+.me-quote-sub-header {
     padding: 0px 0px 0px 10px;
     text-align: left;
     color: #4a93a1;
@@ -133,39 +162,18 @@ body {
     font-weight: bold;
 }
 
-.main-header {
-    /* ELEMENT */
-    height: auto;
-    text-align: left;
-    margin: auto;
-    padding: 0px 20px 0px 10px;
-    max-height: 90%;
-    max-width: 90%;
-    border-radius: 5px;
-
-    /* TEXT */
-    color: #5cbbcc;
-    font-size: 25px;
-    max-font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* Art Types */
+.art-types-button-wrapper {
+    display: flex;
+    justify-content: space-around;
 }
 
-.success {
-    color: green;
-    margin: 30px;
+.art-types-button-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.choice-radio-group {
-    margin: auto;
-    padding: 10px;
-    width: 80%;
-    font-size: 150px;
-    color: #de79b1;
-    text-align: left;
-    text-transform: lowercase;
-}
-
 
 .art-types-button-image-box {
     background-size: cover;
@@ -190,25 +198,14 @@ body {
     padding: 10px 10px 10px 10px;
 }
 
-.art-types-button-wrapper {
-    display: flex;
-    justify-content: space-around;
-}
-
-.art-types-button-box {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.switch-checkbox {
+.art-types-switch-checkbox {
     height: 0;
     width: 0;
     visibility: hidden;
 }
 
-.switch-label {
+/* Art Types Switch */
+.art-types-switch-label {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -224,7 +221,7 @@ body {
     transition: background-color .2s;
 }
 
-.switch-label .switch-button {
+.art-types-switch-label .art-types-switch-button {
     content: '';
     position: absolute;
     top: 2px;
@@ -237,16 +234,17 @@ body {
     box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
 
-.switch-checkbox:checked + .switch-label .switch-button {
+.art-types-switch-checkbox:checked + .art-types-switch-label .art-types-switch-button {
     left: calc(100% - 2px);
     transform: translateX(-100%);
 }
 
-.switch-label:active .switch-button {
+.art-types-switch-label:active .art-types-switch-button {
     width: 60px;
 }
 
-.yes-btn {
+/* Results */
+.get-results-button {
     border: 3px solid #c769b5;
     border-radius: 100%;
     font-size: 35px;
@@ -263,7 +261,7 @@ body {
     box-shadow: 8px 8px #de79b1;
 }
 
-.yes-btn:hover {
+.get-results-button:hover {
     color: green;
     background: linear-gradient(#ffffff, #5cbbcc);
     border: 3px solid green;
@@ -271,7 +269,7 @@ body {
     opacity: 60%;
 }
 
-.yes-btn:active {
+.get-results-button:active {
     color: green;
     background: linear-gradient(#ffffff, #5cbbcc);
     border: 3px solid green;
@@ -279,7 +277,7 @@ body {
     opacity: 60%;
 }
 
-.result-item-box {
+.results-item-box {
     background: transparent;
     color: #c769b5;
     font-weight: bold;
@@ -303,14 +301,14 @@ body {
     flex-direction: row;
 }
 
-.result-item-box:hover {
+.results-item-box:hover {
     border: 3px solid green;
     box-shadow: 8px 8px #005000;
     opacity: 60%;
     color: green;
 }
 
-.result-item-box:active {
+.results-item-box:active {
     background: linear-gradient(#ffffff, #5cbbcc);
     border: 3px solid green;
     box-shadow: 8px 8px #005000;
@@ -318,8 +316,8 @@ body {
     color: green;
 }
 
-/* Popup style */
-.popup-box {
+/* Results Popup */
+.results-popup-box {
     position: fixed;
     background: #00000090;
     width: 100%;
@@ -328,14 +326,14 @@ body {
     left: 0;
 }
 
-.popup-header {
+.results-popup-header {
     color: #c769b5;
     font-size: 20px;
     text-align: left;
     font-weight: bold;
 }
 
-.popup-contents {
+.results-popup-contents {
     color: #975089;
     font-size: 15px;
     text-align: left;
@@ -363,7 +361,7 @@ body {
     align-items: flex-start;
 }
 
-.popup-image-box {
+.results-popup-image-box {
     align-self: center;
     border: 3px solid #c769b5;
     height: 90%;
@@ -373,7 +371,7 @@ body {
     padding: 2px;
 }
 
-.close-icon {
+.results-close-icon {
     content: 'x';
     cursor: pointer;
     position: fixed;

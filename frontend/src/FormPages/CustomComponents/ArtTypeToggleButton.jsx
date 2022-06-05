@@ -3,7 +3,7 @@ import React from "react";
 export default function ArtTypeToggleButton(props) {
     const {stateKey, imgUrl, state, handleChoice} = props
     const currentValue = state[stateKey]
-    const buttonId = "switch-new-" + stateKey
+    const buttonId = "art-types-switch-new-" + stateKey
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function ArtTypeToggleButton(props) {
                     <input
                         id={buttonId}
                         type="checkbox"
-                        className="switch-checkbox"
+                        className="art-types-switch-checkbox"
                         checked={currentValue}
                         onChange={(e) => {
                             handleChoice(stateKey, e.target.checked)
@@ -25,10 +25,10 @@ export default function ArtTypeToggleButton(props) {
                     />
                     <label
                         style={{background: currentValue && '#c769b5'}}
-                        className="switch-label"
+                        className="art-types-switch-label"
                         htmlFor={buttonId}
                     >
-                        <span className={`switch-button`}/>
+                        <span className={`art-types-switch-button`}/>
                     </label>
                 </div>
             </div>

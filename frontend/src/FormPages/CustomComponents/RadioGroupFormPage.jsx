@@ -20,12 +20,12 @@ export class RadioGroupFormPage extends Component {
                 <ArrowBackIcon
                     onClick={backCallback}
                     fontSize="large"
-                    className="next-menu"
+                    className="arrow"
                 />
                 <ArrowForwardIcon
                     onClick={continueCallback}
                     fontSize='large'
-                    className='next-menu'
+                    className='arrow'
                 />
             </React.Fragment>
         );

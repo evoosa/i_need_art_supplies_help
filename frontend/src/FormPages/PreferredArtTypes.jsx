@@ -67,12 +67,12 @@ export class PreferredArtTypes extends Component {
                 <ArrowBackIcon
                     onClick={back}
                     fontSize="large"
-                    className="next-menu"
+                    className="arrow"
                 />
                 <ArrowForwardIcon
                     onClick={continues}
                     fontSize='large'
-                    className='next-menu'
+                    className='arrow'
                 />
             </React.Fragment>
         );
