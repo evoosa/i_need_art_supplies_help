@@ -5,7 +5,8 @@ export function ImgPreloadComponent(props) {
     return (
         <link rel="preload"
               href={"https://art-supplies-images.pasten.life/images/" + fileName}
-              as="image"/>
+              as="image"
+        />
     )
 
 }

@@ -55,6 +55,6 @@ def get_recommended_art_supplies():
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', 80,
+    app.run('0.0.0.0', 6969,
             ssl_context=('/etc/letsencrypt/live/i-need-art-supplies-help.pasten.life/fullchain.pem',
                          '/etc/letsencrypt/live/i-need-art-supplies-help.pasten.life/privkey.pem'))
