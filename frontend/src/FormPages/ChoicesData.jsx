@@ -5,6 +5,11 @@ export const ChoicesData = {
         "subHeader": "I have some ideas for art experiences you can enjoy together",
         "choices": [
             {
+                "value": "2",
+                "label": "It doesn't matter",
+                "sx": {}
+            },
+            {
                 "value": "0",
                 "label": "We're into a couples Experience 💑",
                 "sx": {}
@@ -13,12 +18,7 @@ export const ChoicesData = {
                 "value": "1",
                 "label": "The materials are for her personal use",
                 "sx": {}
-            },
-            {
-                "value": "2",
-                "label": "It doesn't matter",
-                "sx": {}
-            },
+            }
         ]
     },
     "compact": {

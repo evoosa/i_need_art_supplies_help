@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import ArtTypeToggleButton from "./CustomComponents/ArtTypeToggleButton"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-export class PreferredArtTypes extends Component {
+export class PreferredArtTypesPage extends Component {
     render() {
         const {back, continues, state, handleChoice} = this.props
         return (
@@ -79,4 +79,4 @@ export class PreferredArtTypes extends Component {
     }
 }
 
-export default PreferredArtTypes;
+export default PreferredArtTypesPage;

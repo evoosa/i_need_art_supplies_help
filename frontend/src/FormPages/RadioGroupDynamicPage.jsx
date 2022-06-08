@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import CustomRadioGroup from "./CustomRadioGroup";
+import CustomRadioGroup from "./CustomComponents/CustomRadioGroup";
 
 
-export class RadioGroupFormPage extends Component {
+export class RadioGroupDynamicPage extends Component {
     render() {
         const {choicesData, handleChoice, state, backCallback, continueCallback} = this.props
         return (
@@ -32,4 +32,4 @@ export class RadioGroupFormPage extends Component {
     }
 }
 
-export default RadioGroupFormPage;
+export default RadioGroupDynamicPage;

@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import WelcomePage from "./WelcomePage";
-import PreferredArtTypes from "./PreferredArtTypes";
+import PreferredArtTypesPage from "./PreferredArtTypesPage";
 import Approve from "./Approve"
-import GetResults from "./GetResults";
-import RadioGroupFormPage from "./CustomComponents/RadioGroupFormPage";
+import GetResultsPage from "./GetResultsPage";
+import RadioGroupDynamicPage from "./RadioGroupDynamicPage";
 import {ChoicesData} from "./ChoicesData";
 
 
@@ -53,7 +53,7 @@ export class ArtSuppliesForm extends Component {
                     continues={this.continues}
                 />);
             case 2:
-                return (<RadioGroupFormPage
+                return (<RadioGroupDynamicPage
                     choicesData={ChoicesData.safeBet}
                     handleChoice={this.handleChoice}
                     state={this.state}
@@ -72,14 +72,14 @@ export class ArtSuppliesForm extends Component {
                     }}
                 />);
             case 3:
-                return (<PreferredArtTypes
+                return (<PreferredArtTypesPage
                     back={this.back}
                     continues={this.continues}
                     state={this.state}
                     handleChoice={this.handleChoice}
                 />);
             case 4:
-                return (<RadioGroupFormPage
+                return (<RadioGroupDynamicPage
                     choicesData={ChoicesData.compact}
                     handleChoice={this.handleChoice}
                     state={this.state}
@@ -87,7 +87,7 @@ export class ArtSuppliesForm extends Component {
                     continueCallback={this.continues}
                 />);
             case 5:
-                return (<RadioGroupFormPage
+                return (<RadioGroupDynamicPage
                     choicesData={ChoicesData.likesExperimenting}
                     handleChoice={this.handleChoice}
                     state={this.state}
@@ -95,7 +95,7 @@ export class ArtSuppliesForm extends Component {
                     continueCallback={this.continues}
                 />);
             case 6:
-                return (<RadioGroupFormPage
+                return (<RadioGroupDynamicPage
                     choicesData={ChoicesData.messy}
                     handleChoice={this.handleChoice}
                     state={this.state}
@@ -103,7 +103,7 @@ export class ArtSuppliesForm extends Component {
                     continueCallback={this.continues}
                 />);
             case 7:
-                return (<RadioGroupFormPage
+                return (<RadioGroupDynamicPage
                     choicesData={ChoicesData.together}
                     handleChoice={this.handleChoice}
                     state={this.state}
@@ -116,7 +116,7 @@ export class ArtSuppliesForm extends Component {
                     continues={this.continues}
                 />);
             case 9:
-                return (<GetResults
+                return (<GetResultsPage
                     state={this.state}
                 />);
             default:

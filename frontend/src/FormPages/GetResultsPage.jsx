@@ -1,7 +1,7 @@
 import React from 'react';
 import PopupButton from "./CustomComponents/PopupButton";
 
-export class GetResults extends React.Component {
+export class GetResultsPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -50,4 +50,4 @@ export class GetResults extends React.Component {
 
 }
 
-export default GetResults
+export default GetResultsPage
