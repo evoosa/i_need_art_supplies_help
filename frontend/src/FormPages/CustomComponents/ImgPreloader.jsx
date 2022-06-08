@@ -3,7 +3,7 @@ import React, {Component} from "react";
 export function ImgPreloadComponent(props) {
     const {fileName} = props
     return (
-        <link rel="preload"
+        <link rel="prefetch"
               href={"https://art-supplies-images.pasten.life/images/" + fileName}
               as="image"
         />
