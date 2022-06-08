@@ -54,6 +54,13 @@ def get_recommended_art_supplies():
         return {key: val.attributes for (key, val) in rec.recommended_art_supplies.items()}
 
 
+@app.route('/get_all_art_supplies_filenames', methods=['GET'])
+@cross_origin()
+def get_all_art_supplies_filenames():
+    rec = recommendation({})
+    return {key: val.attributes['img_filename'] for (key, val) in rec.og_art_supplies.items()}
+
+
 if __name__ == '__main__':
     app.run('0.0.0.0', 6969,
             ssl_context=('/etc/letsencrypt/live/i-need-art-supplies-help.pasten.life/fullchain.pem',
