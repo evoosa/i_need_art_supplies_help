@@ -29,7 +29,7 @@ export class MusicPlayer extends Component {
                         onClick={this.playButtonOnClickHandler}>Play
                 </button>
                 <audio id="horrible-music" hidden controls>
-                    <source src="https://art-supplies-images.pasten.life/horrible_music.mp3" type="audio/mpeg"/>
+                    <source src={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + "horrible_music.mp3"} type="audio/mpeg"/>
                 </audio>
             </React.Fragment>
         );

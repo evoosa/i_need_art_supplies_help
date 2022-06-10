@@ -23,7 +23,7 @@ export class ArtSuppliesImgPreloader extends Component {
     }
 
     GetArtSuppliesImagesFilenamesFromServer = () => {
-        return fetch('https://i-need-art-supplies-help.pasten.life:6969/get_all_art_supplies_filenames')
+        return fetch(process.env.REACT_APP_BACKEND_URL + 'get_all_art_supplies_filenames')
             .then((response) => response.json())
             .then((responseJson) => {
                 return responseJson;
@@ -58,7 +58,7 @@ export class ArtSuppliesImgPreloader extends Component {
     }
 }
 
-export class ImgPreloader extends Component {
+export class WebsiteAssetImgsPreloader extends Component {
     render() {
         const imgFilenames = [
             "phone-lady_compressed.webp",
@@ -83,4 +83,4 @@ export class ImgPreloader extends Component {
     }
 }
 
-export default ImgPreloader;
+export default WebsiteAssetImgsPreloader;

@@ -21,7 +21,7 @@ export class GetResultsPage extends React.Component {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(state)
         };
-        fetch('https://i-need-art-supplies-help.pasten.life:6969/get_recommended_art_supplies', requestOptions)
+        fetch(process.env.REACT_APP_BACKEND_URL + 'get_recommended_art_supplies', requestOptions)
             .then((response) => response.json())
             .then((responseJson) => {
                 this.setState({data: responseJson})

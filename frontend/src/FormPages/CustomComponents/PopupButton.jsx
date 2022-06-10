@@ -47,7 +47,6 @@ function PopupButton(props) {
                      src={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + art_supply.img_filename}
                      alt={"art-supply-" + art_supply.img_filename}
                 />
-
                 <br/>
                 <h2 className={"results-popup-header"}>Prices</h2>
                 <p>

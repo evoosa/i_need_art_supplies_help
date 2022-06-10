@@ -4,12 +4,17 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" href="https://art-supplies-images.pasten.life/images/o_transparent.webp">
+    <link rel="icon" href="%REACT_APP_IMAGES_S3_BUCKET_PATH%o_transparent.webp">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>Art Supplies? What?</title>
+    <style>
+        #root-body {
+            background: url('%REACT_APP_IMAGES_S3_BUCKET_PATH%penscribble_compressed_50.webp');
+        }
+    </style>
 </head>
 
-<body>
+<body id="root-body">
 <div id="root"></div>
 </body>
 
