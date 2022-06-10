@@ -20,7 +20,7 @@ export class PreferredArtTypesPage extends Component {
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="painting"
-                            imgUrl="https://art-supplies-images.pasten.life/images/painting_compressed_50.webp"
+                            imgUrl={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + "painting_compressed_50.webp"}
                             state={state}
                             handleChoice={handleChoice}
                         >
@@ -29,7 +29,7 @@ export class PreferredArtTypesPage extends Component {
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="sketching"
-                            imgUrl="https://art-supplies-images.pasten.life/images/sketching_compressed_50.webp"
+                            imgUrl={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + "sketching_compressed_50.webp"}
                             state={state}
                             handleChoice={handleChoice}
                         >
@@ -46,7 +46,7 @@ export class PreferredArtTypesPage extends Component {
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="writing"
-                            imgUrl="https://art-supplies-images.pasten.life/images/writing_compressed_50.webp"
+                            imgUrl={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + "writing_compressed_50.webp"}
                             state={state}
                             handleChoice={handleChoice}
                         >
@@ -55,7 +55,7 @@ export class PreferredArtTypesPage extends Component {
                     <Grid item xs={1}>
                         <ArtTypeToggleButton
                             stateKey="crafting"
-                            imgUrl="https://art-supplies-images.pasten.life/images/crafting_compressed_50.webp"
+                            imgUrl={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + "crafting_compressed_50.webp"}
                             state={state}
                             handleChoice={handleChoice}
                         >

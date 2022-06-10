@@ -6,7 +6,7 @@ function PreloadImgElements(props) {
         return <link
             key={index}
             rel="preload"
-            href={"https://art-supplies-images.pasten.life/images/" + imgFilename}
+            href={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + imgFilename}
             as="image"
         />
     })

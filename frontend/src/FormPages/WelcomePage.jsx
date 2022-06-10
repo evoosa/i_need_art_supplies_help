@@ -13,7 +13,7 @@ export class WelcomePage extends Component {
                 <h2 className={"sub-header friend-quote-sub-header"}>She expressed interest in art lately, and I'd like to
                     surprise her. What should I buy her?"</h2>
                 <img className="loading-img phone-lady-img"
-                     src="https://art-supplies-images.pasten.life/images/phone-lady_compressed.webp"
+                     src={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + "phone-lady_compressed.webp"}
                      alt={"phone-lady"}
                 />
                 <br/>
