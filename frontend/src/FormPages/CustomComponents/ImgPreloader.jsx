@@ -1,29 +1,64 @@
 import React, {Component} from "react";
 
-export function ImgPreloadComponent(props) {
-    const {fileName} = props
-    return (
-        <link rel="prefetch"
-              href={"https://art-supplies-images.pasten.life/images/" + fileName}
-              as="image"
+function PreloadImgElements(props) {
+    const {imgFilenames} = props
+    return imgFilenames.map(function (imgFilename, index) {
+        return <link
+            key={index}
+            rel="preload"
+            href={"https://art-supplies-images.pasten.life/images/" + imgFilename}
+            as="image"
         />
-    )
+    })
+}
 
+export class ArtSuppliesImgPreloader extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            filenames: []
+        };
+    }
+
+    GetArtSuppliesImagesFilenamesFromServer = () => {
+        return fetch('https://i-need-art-supplies-help.pasten.life:6969/get_all_art_supplies_filenames')
+            .then((response) => response.json())
+            .then((responseJson) => {
+                return responseJson;
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+
+    componentDidMount() {
+        this.GetArtSuppliesImagesFilenamesFromServer().then((responseData) => {
+            this.setState({filenames: responseData.filenames})
+        });
+    }
+
+    render() {
+        if (this.state.filenames.length === 0) {
+            return (
+                <h1 hidden>fetching art supplies images</h1>
+            )
+        } else {
+            return (
+                <React.Fragment>
+                    <div>
+                        <PreloadImgElements
+                            imgFilenames={this.state.filenames}
+                        />
+                    </div>
+                </React.Fragment>
+            );
+        }
+    }
 }
 
 export class ImgPreloader extends Component {
-
-    PreloadImgElements = (props) => {
-        const imgFilenames = props.imgFilenames;
-        return imgFilenames.map(function (imgFilename, index) {
-            return <ImgPreloadComponent
-                key={index}
-                fileName={imgFilename}
-            />
-        })
-    }
-
-
     render() {
         const imgFilenames = [
             "phone-lady_compressed.webp",
@@ -35,10 +70,11 @@ export class ImgPreloader extends Component {
             "instagram.webp",
             "o_transparent.webp"
         ]
+
         return (
             <React.Fragment>
                 <div>
-                    <this.PreloadImgElements
+                    <PreloadImgElements
                         imgFilenames={imgFilenames}
                     />
                 </div>

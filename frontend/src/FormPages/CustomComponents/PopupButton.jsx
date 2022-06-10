@@ -30,7 +30,7 @@ function PopupButton(props) {
             value={art_supply.material_name}
             onClick={togglePopup}
         />
-        <br></br>
+        <br/>
         {isOpen && <Popup
             content={<>
                 <h2 style={{
