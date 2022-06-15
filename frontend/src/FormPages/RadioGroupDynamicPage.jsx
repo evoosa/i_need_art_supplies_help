@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import CustomRadioGroup from "./CustomComponents/CustomRadioGroup";
+import CustomRadioGroup from "../CustomComponents/CustomRadioGroup";
 
 
 export class RadioGroupDynamicPage extends Component {

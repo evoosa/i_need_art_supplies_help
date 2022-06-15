@@ -1,5 +1,5 @@
 import React from 'react';
-import PopupButton from "./CustomComponents/PopupButton";
+import PopupButton from "../CustomComponents/PopupButton";
 
 export class GetResultsPage extends React.Component {
 

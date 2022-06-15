@@ -2,12 +2,12 @@ import React, {Component} from "react";
 
 function PreloadImgElements(props) {
     const {imgFilenames} = props
-    return imgFilenames.map(function (imgFilename, index) {
-        return <link
-            key={index}
-            rel="preload"
-            href={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + imgFilename}
-            as="image"
+    return imgFilenames.map(function (imgFilename) {
+        return <img
+            key={imgFilename}
+            style={{"display": "none"}}
+            alt={imgFilename}
+            src={process.env.REACT_APP_IMAGES_S3_BUCKET_PATH + imgFilename}
         />
     })
 }
@@ -82,5 +82,3 @@ export class WebsiteAssetImgsPreloader extends Component {
         );
     }
 }
-
-export default WebsiteAssetImgsPreloader;

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import {playMusic} from "./CustomComponents/MusicPlayer"
+import {playMusic} from "../CustomComponents/MusicPlayer"
 
 export class WelcomePage extends Component {
     render() {
