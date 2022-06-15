@@ -11,7 +11,7 @@ export class Approve extends Component {
                 <button
                     className="get-results-button"
                     onClick={continues}
-                >Kind Off 🧐
+                >Kind Of 🧐
                 </button>
 
                 <br/>
