@@ -11,6 +11,9 @@ to get a list of potential art supplies you can buy for your creative loved ones
 
 --------------------------------------------------------------------
 
+![you](https://art-supplies-images.pasten.life/images/phone-lady_compressed.webp)
+
+
 So you woke up early in the morning to go to the gym, feeling fine and fresh,
 when suddenly you get a horrifying popup message from Google Calendar...
 
