@@ -37,14 +37,30 @@ export class GetResultsPage extends React.Component {
                 <h1 className={"header"}>K Wait a sec..</h1>
             )
         } else {
-            return <div>
-                {Object.keys(this.state.data).map(key => {
-                    return <PopupButton
-                        key={key}
-                        art_supply={this.state.data[key]}
-                    />
-                })}
-            </div>
+            if (Object.keys(this.state.data).length === 0) {
+                return (
+                    <div>
+                        <h2 className={"sub-header"}>i'm sorry</h2>
+                        <h1 className={"header"}>i couldn't find anything that suites your partner</h1>
+                        <h2 className={"sub-header"}>go to a restaurant</h2>
+                        <h2
+                            className={"sub-header"}
+                            style={{fontSize: "30px"}}
+                        >♥ 🥙 ♥</h2>
+                    </div>
+                )
+
+            } else {
+                return <div>
+                    {Object.keys(this.state.data).map(key => {
+                        return <PopupButton
+                            key={key}
+                            art_supply={this.state.data[key]}
+                        />
+                    })}
+                </div>
+            }
+
         }
     }
 

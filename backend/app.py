@@ -12,27 +12,6 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 ART_TYPES = ['writing', 'crafting', 'sketching', 'painting']
 
-test_answer = {
-    'compact': '0',
-    'preferred_art_types': ['crafting', 'sketching', 'painting'],
-    'likes_experimenting': '0',
-    'messy': '0',
-    'together': '1',
-    'safe_bet': '1'
-}
-
-test_response = {'compact': '2',
-                 'crafting': True,
-                 'likesExperimenting': '0',
-                 'messy': '0',
-                 'painting': True,
-                 'safeBet': '1',
-                 'sketching': False,
-                 'step': 1,
-                 'together': '2',
-                 'writing': False}
-
-
 def parse_response(response):
     print(response)
     parsed_response = {
@@ -62,7 +41,6 @@ def get_recommended_art_supplies():
 def get_all_art_supplies_filenames():
     if request.method == 'GET':
         rec = recommendation({})
-        # return {key: val.attributes['img_filename'] for (key, val) in rec.og_art_supplies.items()}
         return {'filenames': [val.attributes['img_filename'] for (key, val) in rec.og_art_supplies.items()]}
 
 
