@@ -68,7 +68,8 @@ export class WebsiteAssetImgsPreloader extends Component {
             "crafting_compressed_50.webp",
             "penscribble_compressed_50.webp",
             "instagram.webp",
-            "o_transparent.webp"
+            "o_transparent_compressed.webp",
+            "linkedin_icon.webp"
         ]
 
         return (
