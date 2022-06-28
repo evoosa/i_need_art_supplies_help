@@ -50,7 +50,7 @@ function PopupButton(props) {
                 <br/>
                 <h2 className={"results-popup-header"}>Prices</h2>
                 <p>
-                    starts from {art_supply.min_price_ils} ILS per {art_supply.price_per}
+                    starts from {art_supply.min_price_usd} USD per {art_supply.price_per}
                     {(art_supply.available_in_set === '0' ? ', it\'s available in sets' : '')}
                     {(art_supply.available_in_singles === '0' ? ', it\'s available in singles.' : '')}
                 </p>

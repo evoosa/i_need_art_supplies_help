@@ -16,4 +16,3 @@ class artSupply():
                 self.group_membership[key.replace('g_', '')] = self.__details[key]
             elif key.startswith('attr_'):
                 self.attributes[key.replace('attr_', '')] = self.__details[key]
-        # self.logger.debug(self.__dict__)
