@@ -6,7 +6,7 @@ import logging
 from datetime import datetime
 import os
 
-APP_NAME = 'art_supplies_app'
+APP_NAME = 'art-supplies'
 ART_SUPPLIES_CSV = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../art_supplies/art_supplies.csv')
 BASE_DIR = f'/opt/{APP_NAME}'
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
